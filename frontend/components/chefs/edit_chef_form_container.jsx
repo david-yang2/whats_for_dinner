@@ -13,7 +13,7 @@ class EditChefForm extends React.Component {
 
     render(){
         const {action, formType, chef} = this.props;
-
+        console.log(this.props)
         if (!chef) return "chef is uninitialized";
         return (
           <ChefForm
@@ -27,7 +27,7 @@ class EditChefForm extends React.Component {
 const mapStateToProps = (state, ownProps) => ({
 
     chef: state.chefs[ownProps.match.params.id],
-    formType: "Update chef"
+    formType: "Update Chef"
     
 });
     
@@ -35,7 +35,7 @@ const mapDispatchToProps = dispatch => ({
 
     action: chef => dispatch(updateChef(chef)),
 
-    fetchChef: chefId => dispatch(fetchChef(chefId))
+    fetchChef: id => dispatch(fetchChef(id))
 });
     
 export default connect(mapStateToProps,mapDispatchToProps)(EditChefForm);
