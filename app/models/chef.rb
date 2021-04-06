@@ -1,3 +1,4 @@
 class Chef < ApplicationRecord
-    validates :name, :location, presence: true
+    validates :location, :bio, :name, presence: true
+    has_many :dishes
 end

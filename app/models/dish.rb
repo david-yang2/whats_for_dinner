@@ -6,8 +6,8 @@ class Dish < ApplicationRecord
         "Medium",
         "Spicy"
     ]
-    validates :menu_id, :name, :description, :spiciness, presence: true
+    validates :chef_id, :name, :description, :spiciness, presence: true
     validates :spiciness, inclusion: SPICINESS_LEVEL
 
-    belongs_to :menu
+    belongs_to :chef
 end
