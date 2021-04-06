@@ -1,0 +1,1 @@
+json.extract! dish, :chef_id, :name, :description, :spiciness
