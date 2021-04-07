@@ -5,8 +5,9 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: :json } do
     resources :chefs, except: [:new, :edit] do 
-      resources :items, only: [:index, :show]
+      resources :items, only: [:index]
     end
+    resources :items, only: [:show]
   end
 
 end

@@ -2,17 +2,15 @@ require "byebug"
 class Api::ItemsController < ApplicationController
 
     def index
-        #dn /menu/:menu_id/items
-        #dn :menu_id is part of the path that the route matches
-        #dn although this is the item controller, you can still find the menu with the
-        #dn given ID in the URL
-    
-        #dn menu.items will only index the items of the given menu
-        @items = Item.all
+        #/chefs/:id/items
+        #render a specific chef's items
+        @chef = Chef.find(params[:chef_id])
+        render json: @chef.items
     end
     
     def show
-        render json: Item.find(params[:id])
+        #show all the items
+        render json: Item.all
     end
     
     # def create
