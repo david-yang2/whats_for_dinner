@@ -2,7 +2,7 @@ import React from 'react';
 
 class ChefForm extends React.Component{
   constructor(props){
-    super(props)
+    super(props);
 
     this.state = this.props.chef;
 
@@ -30,7 +30,6 @@ class ChefForm extends React.Component{
           <input
             type="text"
             value={this.state.name}
-
             onChange={this.update('name')}
           />
         </label>

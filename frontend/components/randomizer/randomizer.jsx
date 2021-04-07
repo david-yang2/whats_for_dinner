@@ -1,4 +1,5 @@
 import React from 'react';
+import './randomizer.css';
 
 class Randomizer extends React.Component{
 
@@ -36,7 +37,7 @@ class Randomizer extends React.Component{
 
     render () {
         return (
-            <div>
+            <div className ="divRandom">
                 <h1>Can't Decide? Use the button to choose your Chef</h1>
                 <button onClick={() => 
                     this.randomChef(this.getRandomInt(this.chefs.length))}>Random</button>

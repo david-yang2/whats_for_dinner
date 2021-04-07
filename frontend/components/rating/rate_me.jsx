@@ -33,11 +33,8 @@ class RateMe extends React.Component{
                                 value = {ratingValue}
                                 onClick = {() => this.setRating(ratingValue)}
                             />
-
-
-                        
                             <IoFastFoodSharp 
-                                size={50}
+                                size={20}
                                 color={ratingValue <= (this.state.hover ||this.state.rating) ? "ffc107" : "#e4e5e9"}
                                 onMouseEnter={()=> this.setHover(ratingValue)}
                                 onMouseExit={()=> this.setHover(null)}

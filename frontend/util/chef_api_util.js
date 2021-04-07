@@ -12,8 +12,7 @@ export const fetchChef = id => {
     });
 };
 
-
-export const createChefs = chef => {
+export const createChef = chef => {
     return $.ajax({
         url:`/api/chefs`,
         method: "POST",
@@ -24,8 +23,8 @@ export const createChefs = chef => {
 export const updateChef = chef => {
     return $.ajax({
         url:`/api/chefs/${chef.id}`,
-        method: "POST",
-        data: {chef}
+        method: "PATCH",
+        data: {chef: chef}
     })
 };
 

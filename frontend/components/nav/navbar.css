@@ -1,8 +1,16 @@
-.nav{
+
+.navbar{
     display:flex;
+
     justify-content: space-around;
+    min-height: 10vh;
+    background-color: rgb(145, 145, 223);
+}
+
+.navLinks{
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    min-height: 10000px; 
-    background: blue;
-    color: black;
+    list-style: none;
 }

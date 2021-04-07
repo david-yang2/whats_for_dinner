@@ -5,3 +5,81 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+#Chefs
+Chef.destroy_all
+
+chef1 = Chef.create(location: "North Beach", bio: "I have been cooking for 10 years", name:"Jimmy")
+chef2 = Chef.create(location: "Chinatown", bio: "I enjoy cooking with my family.", name:"Tommy")
+chef3 = Chef.create(location: "Richmond", bio: "Just started cooking and loving it so far!", name:"Kate")
+chef4 = Chef.create(location: "Oakland", bio: "Cooking is an art!", name:"Emma")
+chef5 = Chef.create(location: "Sunset", bio: "You don't need a silver fork to eat good food.", name:"Luffy")
+chef6 = Chef.create(location: "Sunset", bio: "We help make everyday delicious", name:"Marion")
+#Items
+# t.integer "chef_id", null: false
+# t.string "name", null: false
+# t.text "description", null: false
+# t.string "spiciness", null: false
+# "Non-Spicy",
+# "Mild",
+# "Medium",
+# "Spicy"
+
+
+# item1 = Item.create(
+#     chef_id: , 
+#     name:"", 
+#     description:"", 
+#     spiciness: ""
+# )
+Item.destroy_all
+
+item1 = Item.create(
+    chef_id: chef1.id, 
+    name:"Pho", 
+    description:"Vietnamese soup consisting of broth, rice noodles, herbs, and meat, sometimes chicken", 
+    spiciness: "Medium"
+    )
+
+item2 = Item.create(
+    chef_id: chef3.id, 
+    name:"Hamburger", 
+    description:"Sandwich consisting of one or more cooked patties of ground meat, usually beef, placed inside a sliced bread roll or bun.", 
+    spiciness: "Non-Spicy"
+    )
+    
+item3 = Item.create(
+    chef_id: chef1.id, 
+    name:"Pineapple Fried Rice", 
+    description:"Thai-style sweet and spicy pineapple fried rice with red bell pepper, cashews and cilantro.", 
+    spiciness: "Mild"
+)
+
+item4 = Item.create(
+    chef_id: chef5.id, 
+    name:"Crazy Roll", 
+    description:"deep-fried California Roll served with eel sauce", 
+    spiciness: "Medium"
+)
+
+item5 = Item.create(
+    chef_id: chef3.id, 
+    name:"Alaskan Roll", 
+    description:"smoked salmon, asparagus and avocado", 
+    spiciness: "Non-Spicy"
+)
+
+item6 = Item.create(
+    chef_id: chef2.id, 
+    name:"Unagi Roll", 
+    description:"freshwater eel and avocado on California Roll topped with sweet sauce", 
+    spiciness: "Non-Spicy"
+)
+
+item7 = Item.create(
+    chef_id: chef6.id, 
+    name:"MARION’S BEST BEEF STROGANOFF", 
+    description:"Russian dish of sautéed pieces of beef served in a sauce with smetana.", 
+    spiciness: "Spicy"
+)

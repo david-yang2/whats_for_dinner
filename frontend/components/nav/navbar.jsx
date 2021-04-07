@@ -1,21 +1,21 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-//import './navbar.css';
+import './navbar.css';
 
 class NavBar extends React.Component{
 
     render(){
         return (
-            <nav>
-                <ul>
+            <nav className="navbar">
+                <ul className ="navLinks">
                     <Link to='/'>
                         <li> Home </li>
                     </Link>
                     <Link to='/chefs'>
                         <li> Our Chefs </li>
                     </Link>
-                    <Link to='/plates'>
-                        <li> Plates </li>
+                    <Link to='/items'>
+                        <li> Items </li>
                     </Link>
                 </ul>
             </nav>

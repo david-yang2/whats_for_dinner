@@ -42,5 +42,5 @@ class Api::ChefsController < ApplicationController
     def chef_params
       params.require(:chef).permit(:name, :location, :bio)
     end
-  end
+end
   
