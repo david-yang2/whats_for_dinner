@@ -1,0 +1,1 @@
+json.extract! item, :chef_id, :name, :description, :spiciness
