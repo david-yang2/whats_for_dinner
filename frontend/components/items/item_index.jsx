@@ -6,7 +6,7 @@ import Randomizer from '../randomizer/randomizer';
 class ItemIndex extends React.Component{
     componentDidMount() {
         this.props.fetchItems();
-        console.log("here")
+        // console.log("here")
     }
 
 
