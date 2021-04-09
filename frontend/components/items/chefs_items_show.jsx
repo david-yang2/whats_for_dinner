@@ -1,27 +1,37 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
+//chefs/28/items
 class ChefsItemsShow extends React.Component{
+// this will invoke the connect function
   componentDidMount(){
+    // chefs/28/items
     this.props.fetchChefsItems(this.props.match.params.id);
-    console.log("what did i fetch?")
-    console.log(this.props)
   }
-  render() {
-    if (!this.props.item) return null
-    const { item } = this.props;
 
+  render() {
+    if (!this.props.items) return null
+    
+    const {items} = this.props;
     return (
       <div>
-          <h1>{item.name}</h1>
-          <p>{item.description}</p>
-          <p>{item.spiciness}</p>
-          <Link to="/">Back to Index</Link>
+        <ul>
+            {Object.values(items).map(item=> <li key={item.id}>
+                                                <h3>
+                                                    {item.name}
+                                                </h3>
+                                                <h5>
+                                                    {item.description}
+                                                </h5>
+                                                <h4>
+                                                    {item.price}
+                                                </h4>
+                                            </li> 
+            )}
+        </ul>
       </div>
     );
   }
-
 }
 
 export default ChefsItemsShow;
