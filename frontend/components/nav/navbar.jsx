@@ -17,6 +17,9 @@ class NavBar extends React.Component{
                     <Link to='/items'>
                         <li> Items </li>
                     </Link>
+                    <Link to='/cart'>
+                        <li> Cart </li>
+                    </Link>
                 </ul>
             </nav>
         );
