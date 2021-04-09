@@ -1,31 +1,46 @@
-import React from "react"
-import './card.css'
+import React from "react";
+import './card.css';
+import RateItem from "../rating/rate_item"
+import Cart from "../cart/cart";
 
-const Card = (props) => {
-    return (
+class Card extends React.Component{
+    constructor(props){
+        super(props)
+        // this.addToCart = this.addToCart.bind(this)
+    }
+    // addToCart(currentItem){
+    //     debugger
+    //     <Cart item ={currentItem} />
 
-        <div className = "card">
-            <div className="card-context">
-                <div className = "name-container">
-                    <h3>{props.item.name}</h3>
+    // }
+    render (){
+        debugger
+        return (
+
+            <div className = "card">
+                <div className="card-context">
+                    <div className = "name-container">
+                        <h3>{this.props.item.name}</h3>
+                        <RateItem />
+                    </div>
+                    <div className = "description-container">
+                        <p>{this.props.item.description}</p>
+                    </div>
                 </div>
-                <div className = "description-container">
-                    <p>{props.item.description}</p>
+
+                <div className = "price-container">
+                    <h5>
+                        {this.props.item.price}
+                    </h5>
+                    <button onClick={()=><Cart items={this.props.item}/>}>Pick me!</button>
                 </div>
+
             </div>
+        
+        )
+    }
 
-            <div className = "price-container">
-                <h5>
-                    {props.item.price}
-                </h5>
-                <button>Pick me!</button>
-            </div>
-
-        </div>
-    
-    )
-
-};
+}
 
 export default Card;
 
