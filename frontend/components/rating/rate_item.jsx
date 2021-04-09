@@ -1,7 +1,7 @@
 import React from 'react';
 import {IoFastFoodSharp} from 'react-icons/io5';
 
-class RateMe extends React.Component{
+class RateItem extends React.Component{
     constructor(props){
         super(props);
 
@@ -51,4 +51,4 @@ class RateMe extends React.Component{
 }
 
 
-export default RateMe;
+export default RateItem;
