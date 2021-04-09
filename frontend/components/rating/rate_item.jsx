@@ -36,8 +36,8 @@ class RateItem extends React.Component{
                             <IoFastFoodSharp 
                                 size={20}
                                 color={ratingValue <= (this.state.hover ||this.state.rating) ? "ffc107" : "#e4e5e9"}
-                                onMouseEnter={()=> this.setHover(ratingValue)}
-                                onMouseExit={()=> this.setHover(null)}
+                                // onMouseEnter={()=> this.setHover(ratingValue)}
+                                // onMouseExit={()=> this.setHover(null)}
                                 />
                         </label>
                     )
