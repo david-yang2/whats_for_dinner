@@ -5,7 +5,7 @@ const Cart =(props) =>{
     return (
         <div>
             <ul>
-                {Object.values(props.currentCart).map(item => <li key={item.id}>{item.name}{item.price}</li>)}
+                {Object.values(props.currentCart).map((item,idx) => <li key={idx}>{item.name}{item.price}</li>)}
             </ul>
         </div>
     )
