@@ -1,13 +1,12 @@
 
 .navbar{
     display:flex;
-
-    justify-content: space-around;
+    justify-content: space-between;
     min-height: 10vh;
     background-color: rgb(145, 145, 223);
 }
 
-.navLinks{
+.navoptions{
     width: 40%;
     display: flex;
     justify-content: space-evenly;
