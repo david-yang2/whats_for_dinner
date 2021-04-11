@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     end
     resources :items, only: [:show]
   end
-
+  resource :session, only: [:create, :destroy]
+  resource :users
 end
