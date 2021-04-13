@@ -15,7 +15,10 @@ const ItemsReducer = (oldState = {}, action) =>{
             return action.items;
 
         case RECEIVE_CHEFS_ITEMS:
-            nextState[action.chef.id] = action.chef;
+            // in the items_action
+            // RECEIVE_CHEFS_ITEMS returns chefItems
+            nextState= action.chefItems;
+            
             return nextState;
         default:
             return oldState;
