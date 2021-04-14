@@ -8,7 +8,18 @@ Rails.application.routes.draw do
       resources :items, only: [:index]
     end
     resources :items, only: [:show]
+    resource :session, only: [:new, :create, :destroy]
+
+    resources :users do
+      resources :carts, only: [:show]
+      resources :cartitems, only: [:index]
+    end
+
+    resources :carts do
+      resources :cartitems, only: [:show, :destroy]
+    end
+
+    resources :cartitems, only: [:create]
   end
-  resource :session, only: [:create, :destroy]
-  resource :users
+
 end
