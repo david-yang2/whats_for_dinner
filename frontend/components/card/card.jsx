@@ -1,12 +1,11 @@
 import React from "react";
 import './card.css';
 import RateItem from "../rating/rate_item"
-import Cart from "../cart/cart";
 
 const Card = (props) => {
-        return (
-
+    return(
             <div className = "card">
+                <h3>{props.user.cart}</h3>
                 <div className="card-context">
                     <div className = "name-container">
                         <h3>{props.item.name}</h3>
@@ -21,27 +20,12 @@ const Card = (props) => {
                     <h5>
                         {props.item.price}
                     </h5>
-                    <button onClick={()=>props.addToCart(props.item)}>Pick me!</button>
+                    { props.currentUser ?
+                    (<button onClick={()=>props.addToCart(props.item)}>Save Item!</button>) : (null)}
                 </div>
-
             </div>
         
         )
 };
 
 export default Card;
-
-
-/* <div className = "card">
-<div className="card-context">
-    <div className = "name-container">
-        <h3>{props.chef.name}</h3>
-    </div>
-    <div className = "bio-container">
-        <p>{props.chef.bio}</p>
-    </div>
-    <div className ="location">
-        <h5>{props.chef.location}</h5>
-    </div>
-</div>
-</div> */
