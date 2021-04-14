@@ -1,15 +1,20 @@
 import { connect } from 'react-redux';
-import UpdateCart from "./user/updateCart";
+import UpdateCartComp from "./updatecart";
+import {updateCart, fetchCurrentUser} from "../../actions/user_actions";
 
 
-const mapStateToProps = (state) =>{
-
-
-};
-
-const mapDispatchToProps = dispatch => ({
-    updateCart: post => dispatch(updateCart(post))
-
+const mapStateToProps = (state) =>({
+    user: state.user,
+    session: state.session
 });
 
-export default connect(mapStateToProps,mapDispatchToProps)(UpdateCart);
+const mapDispatchToProps = dispatch => {
+    return{
+    updateCart: user => dispatch(updateCart(user)),
+    fetchCurrentUser: userId => dispatch(fetchCurrentUser(userId)),
+    }
+};
+
+export default connect(
+                        mapStateToProps,
+                        mapDispatchToProps)(UpdateCartComp);
