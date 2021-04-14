@@ -1,12 +1,31 @@
 class User < ApplicationRecord
-  # This makes it so we can validate our password length, without storing it in the DB
+  # # This makes it so we can validate our password length, without storing it in the DB
   attr_reader :password
 
   validates :username, presence: true, uniqueness: true
   validates :password_digest, :session_token, presence: true
   validates :password, length: { minimum: 6 }, allow_nil: true
 
+  # This allows us to run methods before running validations
+  # In this case, we need to have a session_token when a user is first created
+  after_initialize :ensure_session_token
   
+
+
+  has_one(:carts, {
+    primary_key: :id, 
+    foreign_key: :user_id
+    class_name: :Cart
+  })
+
+  has_many cartitems,
+    through: :carts,
+    source: :cartitems
+
+
+
+  # Class method for finding a user ONLY if we have the correct username and password
+  # only return a user if the username/password is correct
   # Class method for finding a user ONLY if we have the correct username and password
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
@@ -38,4 +57,17 @@ class User < ApplicationRecord
     self.save
     self.session_token
   end
+  
+  # def new_session_token
+  #   SecureRandom.urlsafe_base64
+  # end
+
+  # def generate_unique_session_token
+  #   self.session_token = new_session_token
+  #   while User.find_by(session_token: self.session_token)
+  #     self.session_token = new_session_token
+  #   end
+  #   self.session_token
+  # end
+
 end
