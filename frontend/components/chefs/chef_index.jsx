@@ -15,9 +15,10 @@ class ChefIndex extends React.Component{
     render() {
         const {chefs, deleteChef} = this.props;
         if (!chefs) return null;
-
+        
+        // adding image limits for Carousel component
         const breakPoints = [
-            {width: 500, itemsToShow: 1},
+            {width: 500, itemsToShow: 2},
             {width: 1000, itemsToShow: 3},
         ]
         this.state = this.props.chefs
@@ -25,7 +26,7 @@ class ChefIndex extends React.Component{
             
             <div>
                 <div className="chef-index">
-                    <Carousel>
+                    <Carousel breakPoints={breakPoints}>
                         {
                         chefs.map(chef => <ChefIndexItem
                                             chef={chef}
