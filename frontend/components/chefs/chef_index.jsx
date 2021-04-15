@@ -18,8 +18,10 @@ class ChefIndex extends React.Component{
         
         // adding image limits for Carousel component
         const breakPoints = [
+            {width: 1, itemsToShow: 1},
             {width: 500, itemsToShow: 2},
             {width: 1000, itemsToShow: 3},
+            {width: 1500, itemsToShow: 4},
         ]
         this.state = this.props.chefs
         return (
