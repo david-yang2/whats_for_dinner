@@ -13,12 +13,12 @@ const mapStateToProps = state => ({
       formType: "Create Chef"
     });
     
-    const mapDispatchToProps = dispatch => ({
-      // remember it's shared b/t createchef and editchef containers
-      // takes in a chef object and dispatches the createChef action with the chef object
-        // invoked
+const mapDispatchToProps = dispatch => ({
+  // remember it's shared b/t createchef and editchef containers
+  // takes in a chef object and dispatches the createChef action with the chef object
+    // invoked
 
-      action: chef => dispatch(createChef(chef))
-    });
+  action: chef => dispatch(createChef(chef))
+});
     
 export default connect(mapStateToProps, mapDispatchToProps)(ChefForm);

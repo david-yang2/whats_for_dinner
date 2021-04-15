@@ -31,11 +31,12 @@ const mapStateToProps = (state, ownProps) => ({
     
 });
     
-const mapDispatchToProps = dispatch => ({
-
+const mapDispatchToProps = dispatch => {
+    return{
     action: chef => dispatch(updateChef(chef)),
 
     fetchChef: id => dispatch(fetchChef(id))
-});
+    }
+};
     
 export default connect(mapStateToProps,mapDispatchToProps)(EditChefForm);

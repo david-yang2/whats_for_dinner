@@ -1,3 +1,5 @@
 .chef-index{
+    display:flex;
+    flex-direction: row;
     justify-content: space-around;
 }
