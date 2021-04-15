@@ -1,10 +1,11 @@
 import React from 'react';
+import "./home.css";
 
  const Home = () => {
     return (
         <div className="home">
             <h1>Can't decide on dinner?</h1>
-            <img src="./pexels-aleksandar-pasaric-3423860.jpg" />
+            <img src='/images/home/homepagelogo.jpeg' alt="" />
         </div>
     )
 }
