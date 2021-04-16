@@ -28,7 +28,7 @@ class ItemIndex extends React.Component{
                                 name: currentItem.name,
                                 description: currentItem.description,
                                 price: currentItem.price,
-
+                                imagepath: currentItem.imagepath,
         })
     }
     updateSearch(){
@@ -49,15 +49,18 @@ class ItemIndex extends React.Component{
                 {
                     items.map(item => {
                         if(this.state.searchTerm == '') {
+ 
                             return (
-                                <ItemIndexItem
-                                item={item}
-                                cart={this.state.cart}
-                                addToCart={this.addToCart}
-                                key={item.id}
-                                user={this.props.user}
-                                currentUser = {this.props.session.currentUser}
-                                />
+                                <div>
+                                    <ItemIndexItem
+                                    item={item}
+                                    cart={this.state.cart}
+                                    addToCart={this.addToCart}
+                                    key={item.id}
+                                    user={this.props.user}
+                                    currentUser = {this.props.session.currentUser}
+                                    />
+                                </div>
                             )
                         } else if (item.name.toLowerCase().includes(this.state.searchTerm) ||
                                     item.description.toLowerCase().includes(this.state.searchTerm)) {
