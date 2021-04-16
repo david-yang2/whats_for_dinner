@@ -1,27 +1,28 @@
 import React from "react";
-import './card.css';
 import RateItem from "../rating/rate_item"
 
 const Card = (props) => {
     return(
             <div className = "card">
-                <h3>{props.user.cart}</h3>
+                <img className="itemimg" src={props.item.imagepath} alt="" />
                 <div className="card-context">
                     <div className = "name-container">
                         <h3>{props.item.name}</h3>
-                        <RateItem />
+                        <div className="ratingicons">
+                            <RateItem />
+                        </div>
                     </div>
-                    <div className = "description-container">
+                    <div >
                         <p>{props.item.description}</p>
                     </div>
                 </div>
 
                 <div className = "price-container">
-                    <h5>
-                        {props.item.price}
+                    <h5 className ="itemprice">
+                        ${props.item.price}
                     </h5>
                     { props.currentUser ?
-                    (<button onClick={()=>props.addToCart(props.item)}>Save Item!</button>) : (null)}
+                    (<button className="savebtn"onClick={()=>props.addToCart(props.item)}>Save Item!</button>) : (null)}
                 </div>
             </div>
         
