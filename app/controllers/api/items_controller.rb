@@ -14,7 +14,6 @@ class Api::ItemsController < ApplicationController
     end
     
     # def create
-    #     debugger
     #     @dish = Dish.new(dish_params)
     
     #     @chef = @dish.chef

@@ -7,10 +7,10 @@ class Api::CartitemsController < ApplicationController
         render json: @user.cartitems
     end
     
-    # def show
-    #     #show all the items
-    #     render json: Item.all
-    # end
+    def show
+        # #show all the items
+        # render json: Item.all
+    end
     
 
 
@@ -29,7 +29,7 @@ class Api::CartitemsController < ApplicationController
         # request, rather than body and URL
 
         if @cartitem.save
-            render :show
+            return
         else
             render json: @cartitem.errors.full_messages, status: :unprocessable_entity
         end
@@ -37,7 +37,7 @@ class Api::CartitemsController < ApplicationController
     
     private
     def cartitem_params
-        params.require(:cartitem).permit(:cart_id, :name, :price)
+        params.require(:cartitem).permit(:user_id, :name, :price, :description, :imagepath)
     end
     
 end
