@@ -32,6 +32,7 @@ class Cart extends React.Component {
                                             <div>
                                                 <img className="itemimg" src={item.imagepath} alt="" />
                                                 <h3 key={idx}> {item.name}</h3>
+                                                <h2>{item.price}</h2>
                                             </div>
                                             )}
                 </div>
