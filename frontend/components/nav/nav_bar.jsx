@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './nav_bar.css';
+// import './app/assets/stylesheets/nav_bar.scss';
 
 export default ({ currentUser, logout }) => {
 
@@ -20,30 +20,27 @@ export default ({ currentUser, logout }) => {
   // : is part of the ternary function
   : (
     <div>
-      <Link className="btn" to="/signup">Sign Up</Link>
-      <Link className="btn" to="/login">Log In</Link>
+      <Link className="btnl" to="/login">Log In</Link>
+      <Link className="btns" to="/signup">Sign Up</Link>
     </div>
   );
 
+  const cart = currentUser ? (
+    <li><Link className ="cartbtn" to='/cart'>Cart</Link></li>
+  ) : (null)
+
   return (
-    <header className="navbar">
-                <nav className="navlinks">
-            <ul className ="navoptions">
-                <Link to='/'>
-                    <li> Home </li>
-                </Link>
-                <Link to='/chefs'>
-                    <li> Our Chefs </li>
-                </Link>
-                <Link to='/items'>
-                    <li> Items </li>
-                </Link>
-                <Link to='/cart'>
-                    <li> Cart </li>
-                </Link>
-            </ul>
-        </nav>
-      <div>
+    <header className="header">
+      <img className="logo" src="./images/home/logo.png" alt=""/>
+      <nav className="navbar">
+        <ul className ="navlinks">
+          <li><Link className ="homel" to='/'>Home</Link></li>
+          <li><Link className ="chefsl" to='/chefs'>Our Chefs</Link></li>
+          <li><Link className ="iteml" to='/items'>Items</Link></li>
+          {cart}
+        </ul>
+      </nav>
+      <div className="signup-container">
         {display}
       </div>
     </header>
