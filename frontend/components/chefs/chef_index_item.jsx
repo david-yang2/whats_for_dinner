@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../card/card';
 import LikeChef from '../likeChef/like_chef';
-import "./chef_index_item.css";
+// import "./chef_index_item.css";
 
 
 const ChefIndexItem = (props) => {
@@ -12,15 +12,17 @@ const ChefIndexItem = (props) => {
     return (
       <div className="chef-card">
           <div>
-            <img src={props.chef.imagepath} alt="" />
-            <h3>{props.chef.name}</h3>       
-            <LikeChef />
+            <img className="chefimg"src={props.chef.imagepath} alt="" />
+            <div className="chefheader">
+              <h3 className="chefname">{props.chef.name}</h3>   
+              <div className="cheflike"><LikeChef /></div> 
+            </div>   
             <br />
-            <Link to={`/chefs/${props.chef.id}/items`}>Check out {props.chef.name}'s Items</Link>
-            <Link to={`/chefs/${props.chef.id}`}>Quick Summary of Chef</Link>
+            <Link className="cheflink" to={`/chefs/${props.chef.id}/items`}>Check out {props.chef.name}'s Items</Link>
+            <Link className="cheflink" to={`/chefs/${props.chef.id}`}>Quick Summary of Chef</Link>
             <br />
-            <div> {props.chef.name}'s restaurant is located in {props.chef.location}</div>
-            <p>{props.chef.bio}</p>
+            <div> {props.chef.name}'s favorite quote:</div>
+            <p className="chefquote">{props.chef.bio}</p>
           </div>
 
 
@@ -30,10 +32,3 @@ const ChefIndexItem = (props) => {
 
 };
 export default ChefIndexItem;
-
-{/* <Link to={`/chefs/${props.chef.id}/edit`}>Edit</Link>
-<button onClick={() => props.deleteChef(props.chef.id)}>Delete</button>  */}
-
-// return (
-//   <Card chef={props.chef} />
-// );
