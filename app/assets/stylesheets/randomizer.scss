@@ -1,0 +1,16 @@
+
+// $border-color: red;
+// $border-style: solid;
+
+//     border: $border-color;
+//     border-style: $border-style;
+
+.divRandom{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20pt;
+    .resultlink{
+        font-size: 12pt;
+    }
+}

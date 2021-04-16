@@ -1,0 +1,44 @@
+$border-color: transparent;
+$border-style: solid;
+
+
+// * {
+//     box-sizing: border-box;
+//     margin: 0;
+//     padding: 0;
+//     border: red;
+
+// }
+
+
+.home{
+    background-image: url('homepagelogo.jpeg');
+    height: 80vh;
+    border: transparent;
+    border-style: $border-style;
+    margin: 3%;
+    opacity: 90%;
+}
+
+// .splashimg {
+//     display:flex;
+//     justify-content: space-around;
+//     width: 80%;
+//     height: 70%;
+//     margin: auto;
+//     align-items: center;
+//     opacity: 80%;
+//     border: $border-color;
+//     border-style: $border-style;
+// }
+
+.hometitle {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255,255,255,0.7);
+    border: $border-color;
+    border-style: $border-style;
+    margin-top: 50%;
+    margin-bottom:50%;
+
+}

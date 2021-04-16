@@ -1,0 +1,25 @@
+$border-color: transparent;
+$border-style: solid;
+
+.itemspage{
+    margin: 2%;
+    width: 100%;
+    // display:flex;
+    border: $border-color;
+    border-style: $border-style;
+}
+
+.searchbar{
+    height: 30px;
+    width: 300px;
+    font-size: 18pt;
+    margin: 10px;
+    border-radius: 5%;
+}
+.items-container{
+    height: 380px;
+    margin: 10px;
+    float: left;
+    border: $border-color;
+    border-style: $border-style;
+}
