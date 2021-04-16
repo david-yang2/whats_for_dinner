@@ -12,15 +12,15 @@ class User < ApplicationRecord
   
 
 
-  has_one(:carts, {
+  has_many(:cartitems, {
     primary_key: :id, 
-    foreign_key: :user_id
-    class_name: :Cart
+    foreign_key: :user_id,
+    class_name: :Cartitem
   })
 
-  has_many cartitems,
-    through: :carts,
-    source: :cartitems
+  # has_many :cartitems,
+  #   through: :carts,
+  #   source: :cartitems
 
 
 

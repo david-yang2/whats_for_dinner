@@ -1,11 +1,11 @@
 class Cartitem < ApplicationRecord
-    belongs_to :cart,
+    belongs_to :user,
         primary_key: :id,
-        foreign_key: :cart_id,
-        class_name: :Cart
+        foreign_key: :user_id,
+        class_name: :User
 
-    has_one(:user, {
-        through: :cart,
-        source: :user
-    })
+    # has_one(:user, {
+    #     through: :cart,
+    #     source: :user
+    # })
 end
