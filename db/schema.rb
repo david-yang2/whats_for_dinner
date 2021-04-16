@@ -10,10 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_07_195207) do
+ActiveRecord::Schema.define(version: 2021_04_16_182107) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "cartitems", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.string "name", null: false
+    t.float "price", null: false
+    t.text "description", null: false
+    t.string "imagepath"
+    t.text "review"
+  end
+
+  create_table "carts", force: :cascade do |t|
+    t.integer "user_id", null: false
+  end
 
   create_table "chefs", force: :cascade do |t|
     t.string "location", null: false
@@ -21,6 +34,7 @@ ActiveRecord::Schema.define(version: 2021_04_07_195207) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "name", null: false
+    t.string "imagepath", null: false
   end
 
   create_table "dishes", force: :cascade do |t|
@@ -33,6 +47,18 @@ ActiveRecord::Schema.define(version: 2021_04_07_195207) do
     t.text "description", null: false
     t.string "spiciness", null: false
     t.float "price", null: false
+    t.string "imagepath", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "username", null: false
+    t.string "password_digest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "session_token", null: false
+    t.text "cart", default: [], array: true
+    t.index ["session_token"], name: "index_users_on_session_token", unique: true
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end
