@@ -1,8 +1,18 @@
 import {connect} from 'react-redux';
 import Cart from './cart';
+import {getUsersCart} from '../../actions/cartitem_actions';
 
-const mapStateToProps = state => ({
-    user: state.user
-})
+// simply fetch and display the current users cart
+const mapStateToProps = state => {
+    return{
+    cartitems: state.cartitems,
+    session: state.session
+    }
+}
 
-export default connect(mapStateToProps,null)(Cart);
+const mapDispatchToProps = dispatch => {
+    return{
+    getUsersCart: userId => dispatch(getUsersCart(userId))
+}}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Cart);

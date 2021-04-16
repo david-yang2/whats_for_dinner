@@ -3,27 +3,22 @@ import React from 'react';
 // import RateMe from '../rating/rate_me';
 import Card from '../card/card';
 
-const ItemIndexItem = (props) => {
 
+
+const ItemIndexItem =(props) =>{
+    
     // you can't call id on an null object, so use this to return null
     // if (props.item) {return null}
     // const {items} = this.props
-    return (
-        <div>
-            <Card item={props.item} />
-        </div>
-            
-    )
+        return (
+            <div className="items-container">
+                <Card item={props.item} 
+                      cart={props.cart} 
+                      addToCart={props.addToCart}
+                      user={props.user}
+                      currentUser = {props.currentUser}
+                      />
+            </div>
+            )
 };
 export default ItemIndexItem;
-
-
-{/* <h3>
-{props.item.name}
-</h3>
-<h5>
-{props.item.description}
-</h5>
-<h4>
-{props.item.price}
-</h4> */}
