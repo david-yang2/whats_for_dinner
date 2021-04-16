@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from "react-router-dom";
 
 class Randomizer extends React.Component{
     constructor (props) {
@@ -30,8 +31,8 @@ class Randomizer extends React.Component{
                 {this.state.generateRandChef ?
                 this.randomChef(this.props.chefs.length) : null}
                     
-                <h3>{this.props.chefs[this.state.number].name}</h3>
-
+                <h3 className="chosen-chef">{this.props.chefs[this.state.number].name}!</h3>
+                <Link className="resultlink"to={`/chefs/${this.props.chefs[this.state.number].id}/items`}>Would you like to check out the chef's page?</Link>
             </div>
         );
     }
