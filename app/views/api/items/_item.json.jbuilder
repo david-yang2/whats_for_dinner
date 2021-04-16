@@ -1,1 +1,1 @@
-json.extract! item, :chef_id, :name, :description, :spiciness
+json.extract! item, :chef_id, :name, :description, :spiciness, :imagepath
