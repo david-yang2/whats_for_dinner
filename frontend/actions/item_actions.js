@@ -29,5 +29,7 @@ export const fetchItems = () => dispatch => {
 
 export const fetchChefsItems = chefId => dispatch => {
     return ItemApiUtil.fetchChefsItems(chefId)
-    .then(chefItems => dispatch(receiveChefsItems(chefItems)))
+    .then(chefItems=> {
+        return dispatch(receiveChefsItems(chefItems))
+    })
 };

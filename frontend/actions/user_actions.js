@@ -3,22 +3,30 @@ import * as UserApiUtil from "../util/user_api_util";
 export const CURRENT_USER = "CURRENT_USER";
 export const UPDATE_CART = "UPDATE_CART";
 
-const getCurrentUser = user => ({
+
+const getCurrentUser = user => {
+    return{
     type: CURRENT_USER,
     user
-});
+    }
+};
 
-const updateUsersCart = user => ({
+const updateUsersCart = updatedCart => {
+    return{
     type: UPDATE_CART,
-    user
-});
+    updatedCart
+}
+};
 
-export const currentUser = userId => dispatch => {
+
+
+export const fetchCurrentUser = userId => dispatch => {
     return UserApiUtil.fetchUser(userId)
     .then(receivedUser => dispatch(getCurrentUser(receivedUser)))
 };
 
-export const updateCart = userId => dispatch => {
-    return UserApiUtil.postUser(userId)
-    .then(usersCart => dispatch(updateUsersCart(usersCart)))
+export const updateCart = item => dispatch => {
+    return UserApiUtil.postCart(item)
+    // .then(updatedCart => dispatch(updateUsersCart(updatedCart)))
 };
+

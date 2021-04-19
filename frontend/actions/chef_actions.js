@@ -11,6 +11,7 @@ const receiveChefs = chefs => {
     }
 };
 const recieveChef = chef => {
+
     return{
         type: RECEIVE_CHEF,
         chef
@@ -40,6 +41,7 @@ export const createChef = chef  => dispatch => {
 };
 
 export const updateChef = chef =>dispatch => {
+
     return ChefApiUtil.updateChef(chef)
     .then(updatedChef => dispatch(recieveChef(updatedChef)))
 };
