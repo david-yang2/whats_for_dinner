@@ -37,7 +37,7 @@ class Api::CartitemsController < ApplicationController
     
     private
     def cartitem_params
-        params.require(:cartitem).permit(:user_id, :name, :price, :description, :imagepath)
+        params.require(:cartitem).permit(:user_id, :name, :price, :description, :imagepath, :review)
     end
     
 end
