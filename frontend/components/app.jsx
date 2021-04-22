@@ -10,6 +10,7 @@ import NavBarContainer from "./nav/navbar_container";
 import OurChefs from "./chefs/our_chefs";
 import CartContainer from "./cart/cart_container";
 import SignupContainer from './sessions/signup_container';
+import LoginContainer from './login/login_container';
 import Home from './home/home';
 import {AuthRoute,
         ProtectedRoute} from "../util/route_api_util";
@@ -24,6 +25,7 @@ const App = () => (
       <Route exact path="/" component ={Home} />
       <Route exact path="/chefs" component ={ChefIndexContainer} />
       <AuthRoute path="/signup" component={SignupContainer} />
+      <AuthRoute path="/login" component={LoginContainer} />
       <Route exact path="/chefs/:id" component={ChefShowContainer} />
       <Route path="/chefs/:id/items" component={ChefsItemsShowContainer} />
       <Route path="/chefs/:id/edit" component={EditChefFormContainer} />
