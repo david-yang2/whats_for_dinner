@@ -22,7 +22,7 @@ class Login extends React.Component{
 
         e.preventDefault();
         // const {history} = this.props;
-        this.props.createNewUser(this.state)
+        this.props.login(this.state)
         .then(()=> this.props.history.push(`/`));
     }
 
