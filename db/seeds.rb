@@ -173,6 +173,7 @@ item11 = Item.create(
 User.destroy_all
 user1 = User.create(
     username: "Emma",
+    email: "Emma@test.com",
     password: "Emma123"
 )
 
