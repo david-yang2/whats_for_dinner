@@ -186,15 +186,18 @@ Cartitem.destroy_all
 
 cartitem1 = Cartitem.create(
     user_id: user1.id,
-    name: "Pho",
-    description: "Super tasty",
-    price: 9.99
-
+    name:"Pho Dac Biet", 
+    description:"Vietnamese soup consisting of broth, rice noodles, herbs, and meat, sometimes chicken", 
+    price: 9.99, 
+    imagepath: "./images/items/pho.jpeg",
+    review: "Tastes amazing! Love the broth!"
 )
 
 cartitem2 = Cartitem.create(
     user_id: user1.id,
-    name: "Fries",
-    description: "doens't need ketchup",
-    price: 3.99
+    name:"Chicken Salad Sandwich", 
+    description:"Lettuce, Tomatoes, Onion, Jalapeno Aioli, Served with Fries", 
+    price: 16.99,
+    imagepath: "./images/items/chicken_sandwich.jpeg",
+    review: "The jalapeno aioli added a great kick to the sandwich!"
 )
