@@ -9,6 +9,7 @@ class Cart extends React.Component {
     }
 
     componentDidMount(){
+        if (!this.props.session.currentUser) return null
         this.props.getUsersCart(this.props.session.currentUser.id)
     }
 
@@ -25,12 +26,11 @@ class Cart extends React.Component {
                 </div>
                 )
             } else {
-                debugger
             return (
                 <div>
                     {Object.values(this.props.cartitems).map((item,idx)=>
-                                            <div>
-                                                <img className="itemimg" src={item.imagepath} alt="" />
+                                            <div className ="cartitems">
+                                                <img className="cartitemimg" src={item.imagepath} alt="" />
                                                 <h3 key={idx}> {item.name}</h3>
                                                 <h2>{item.price}</h2>
                                             </div>

@@ -8,7 +8,7 @@ class ItemIndex extends React.Component{
     constructor (props) {
         super(props)
         this.state={
-            searchTerm: "",
+            searchTerm: ""
             
         };
         this.updateSearch = this.updateSearch.bind(this);
@@ -41,8 +41,8 @@ class ItemIndex extends React.Component{
         //this.props.items will give us an array of items
         return (
 
-            <div>
-                <input type="text" 
+            <div className="itemspage">
+                <input className="searchbar" type="text" 
                         placeholder="Search for an item.." 
                         onChange={this.updateSearch()} />
                 <ul>
