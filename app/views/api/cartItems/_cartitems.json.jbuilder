@@ -1,1 +1,0 @@
-json.extract! cartitem, :cart_id, :name, :price, :description, :imagepath, :review
