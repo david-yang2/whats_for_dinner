@@ -3,7 +3,7 @@
 $border-color: transparent;
 $border-style: solid;
 
-.cartitems{
+.cart{
     display: flex;
     justify-content: space-between;
     margin: 2%;
@@ -15,10 +15,32 @@ $border-style: solid;
     border: $border-color;
     border-style: $border-style;
 }
+.cartitems{
+    width:85%;
+    display:flex;
+    justify-content: space-between;
+}
 
+.cartitem-desc{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .cartitemimg{
     height: 98%;
     width: 150px;
     border: $border-color;
     border-style: $border-style;
+}
+
+.review-form{
+    width:50%;
+}
+
+.review-box{
+    height: 75%;
+}
+
+.reviewbtn{
+    height: 15%;
 }
