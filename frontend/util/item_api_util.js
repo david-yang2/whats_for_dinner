@@ -5,9 +5,9 @@ export const fetchItems = () => {
     });
 };
 
-export const fetchChefsItems = id => {
+export const fetchChefsItems = chefId => {
     return $.ajax({
-        url:`/api/chefs/${id}/items`,
+        url:`/api/chefs/${chefId}/items`,
         method: "GET"
     });
 };

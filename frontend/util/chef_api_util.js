@@ -29,7 +29,6 @@ export const updateChef = chef => {
 };
 
 export const deleteChef = id => {
-    console.log(`/api/chefs/${id}`)
     return $.ajax({
         url: `/api/chefs/${id}`,
         method: "DESTROY"
