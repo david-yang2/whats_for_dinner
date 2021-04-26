@@ -7,9 +7,9 @@ class Api::CartitemsController < ApplicationController
         render json: @user.cartitems
     end
     
+    # GET    /api/cartitems/:id(.:format)
     def show
-        # #show all the items
-        # render json: Item.all
+        @cartitem = Cartitem.find(params[:id])
     end
     
 
@@ -30,6 +30,19 @@ class Api::CartitemsController < ApplicationController
 
         if @cartitem.save
             return
+        else
+            render json: @cartitem.errors.full_messages, status: :unprocessable_entity
+        end
+    end
+
+
+
+    #PATCH  /api/cartitems/:id
+    def update
+
+        @cartitem = Cartitem.find(params[:id])
+        if @cartitem.update(cartitem_params)
+            render :show
         else
             render json: @cartitem.errors.full_messages, status: :unprocessable_entity
         end
