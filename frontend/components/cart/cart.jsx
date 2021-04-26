@@ -1,16 +1,22 @@
 import React from "react";
 import {Link} from "react-router-dom";
+import Cartitems from "./cart_items";
 
 
 class Cart extends React.Component {
     constructor(props){
         super(props);
 
+        this.updateReview = this.updateReview.bind(this)
     }
 
     componentDidMount(){
         if (!this.props.session.currentUser) return null
         this.props.getUsersCart(this.props.session.currentUser.id)
+    }
+
+    updateReview(updatedReview){
+        this.props.updateCartReview(updatedReview)
     }
 
     render(){
@@ -29,12 +35,11 @@ class Cart extends React.Component {
             return (
                 <div>
                     {Object.values(this.props.cartitems).map((item,idx)=>
-                                            <div className ="cartitems">
-                                                <img className="cartitemimg" src={item.imagepath} alt="" />
-                                                <h3 key={idx}> {item.name}</h3>
-                                                <h2>{item.price}</h2>
-                                            </div>
-                                            )}
+                                                        <Cartitems 
+                                                            key={idx}
+                                                            item = {item} 
+                                                            updateReview = {this.updateReview}/>
+                                                            )}
                 </div>
             )}
     }
