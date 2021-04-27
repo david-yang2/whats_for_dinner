@@ -29,6 +29,7 @@ class ItemIndex extends React.Component{
                                 description: currentItem.description,
                                 price: currentItem.price,
                                 imagepath: currentItem.imagepath,
+                                review: "Would you like to leave a review?",
         })
     }
     updateSearch(){
@@ -79,9 +80,9 @@ class ItemIndex extends React.Component{
 
                 }
                 </ul>
-                <div>
+                {/* <div>
                     <Cart fromItemContainer={true}/>
-                </div>
+                </div> */}
             </div>
         );
     }

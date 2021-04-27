@@ -24,7 +24,8 @@ class UpdateCartComp extends React.Component{
                 {this.props.updateCart({ user_id: this.props.user.id,
                                         name: this.props.name,
                                         description: this.props.description,
-                                        price: this.props.price 
+                                        price: this.props.price,
+                                        review: ""
                                     })}
             </div>
             // <div>

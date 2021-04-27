@@ -30,27 +30,27 @@ class Login extends React.Component{
     render(){
 
         return(
-            <div className="session-form">
-                <h2> Login!</h2>
-                <form>
-                    <label>Username:
+            <div className="session">
+                <div className="session-container">
+                <h2 className="session-header"> Please Login!</h2>
+                <form className="session-form">
                         <input 
+                            placeholder="Username:"
                             type="text"
                             value={this.state.username}
                             onChange={this.handleInput('username')}
                         />
-                    </label>
 
-                    <label>Password:
                         <input 
+                            placeholder="Password:"
                             type="password"
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />
-                    </label>
                     <button onClick={this.handleSubmit}>Login</button>
                 </form>
             </div>
+        </div>
         )
     }
 }
