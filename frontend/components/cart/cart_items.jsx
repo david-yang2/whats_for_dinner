@@ -18,13 +18,11 @@ class Cartitems extends React.Component{
       }
 
     handleSubmit(){
-        debugger 
         return this.props.updateReview(this.state)
 
     }
 
     render(){
-        debugger
         return (                                
         <div className ="cart">
             <div className="cartitems">

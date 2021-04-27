@@ -12,7 +12,7 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
-    debugger
+
     return{
     getUsersCart: userId => dispatch(getUsersCart(userId)),
     updateCartReview: item => dispatch(updateCartReview(item))
