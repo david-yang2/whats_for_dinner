@@ -9,6 +9,7 @@ class Login extends React.Component{
             password:"",
         }
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.useDemoLogin = this.useDemoLogin.bind(this)
     }
     
     handleInput(type){
@@ -26,7 +27,13 @@ class Login extends React.Component{
         .then(()=> this.props.history.push(`/`));
     }
 
-    // remember password validates the length of 6
+    // allows user to use default login
+    useDemoLogin(){
+        this.props.login({username:"Emma", password:"Emma123"})
+        .then(()=> this.props.history.push(`/`));
+    }
+
+    // password validation is set to length of 6
     render(){
 
         return(
@@ -47,7 +54,10 @@ class Login extends React.Component{
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />
-                    <button onClick={this.handleSubmit}>Login</button>
+                        <div>
+                            <button onClick={this.handleSubmit}>Login</button>
+                            <button onClick={this.useDemoLogin}>Demo User</button>
+                        </div>
                 </form>
             </div>
         </div>
