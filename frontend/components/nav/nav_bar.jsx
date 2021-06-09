@@ -31,7 +31,7 @@ export default ({ currentUser, logout }) => {
 
   return (
     <header className="header">
-      <img className="logo" src="./images/home/logo.png" alt=""/>
+      <img className="logo" src="./images/home/logo1.png" alt=""/>
       <nav className="navbar">
         <ul className ="navlinks">
           <li><Link className ="homel" to='/'>Home</Link></li>
