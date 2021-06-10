@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {Redirect} from "react-router-dom"
 
 class Randomizer extends React.Component{
     constructor (props) {
@@ -22,7 +23,9 @@ class Randomizer extends React.Component{
     // when you change the state, it will force a re-render
     randomChef(max){
         const newIdx = Math.floor(Math.random() * max);
-        this.setState({number: newIdx, generateRandChef: !this.state.generateRandChef});
+        debugger
+        this.setState({number: newIdx, generateRandChef: !this.state.generateRandChef})
+        return <Redirect to={`/chefs/${this.props.chefs[this.state.number].id}/items`} />
     }   
 
     render () {
@@ -31,8 +34,8 @@ class Randomizer extends React.Component{
                 {this.state.generateRandChef ?
                 this.randomChef(this.props.chefs.length) : null}
                     
-                <h3 className="chosen-chef">{this.props.chefs[this.state.number].name}!</h3>
-                <Link className="resultlink"to={`/chefs/${this.props.chefs[this.state.number].id}/items`}>Would you like to check out the chef's page?</Link>
+                {/* <h3 className="chosen-chef">{this.props.chefs[this.state.number].name}!</h3>
+                <Link className="resultlink"to={`/chefs/${this.props.chefs[this.state.number].id}/items`}>Would you like to check out the chef's page?</Link> */}
             </div>
         );
     }
