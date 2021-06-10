@@ -12,30 +12,25 @@ class Randomizer extends React.Component{
             number: 0,
             generateRandChef: true
         }; 
-
     }
 
 
-    // getRandomInt(max) {
-    //     return Math.floor(Math.random() * max);
-    // }
-    
-    // when you change the state, it will force a re-render
+    // redirect to a random Chef's page
     randomChef(max){
         const newIdx = Math.floor(Math.random() * max);
-        debugger
-        this.setState({number: newIdx, generateRandChef: !this.state.generateRandChef})
-        return <Redirect to={`/chefs/${this.props.chefs[this.state.number].id}/items`} />
+        return <Redirect to={`/chefs/${this.props.chefs[newIdx].id}/items`} />
+
+
+        // this.setState({number: newIdx, generateRandChef: !this.state.generateRandChef})
+
     }   
+
 
     render () {
         return (
             <div className ="divRandom">
                 {this.state.generateRandChef ?
-                this.randomChef(this.props.chefs.length) : null}
-                    
-                {/* <h3 className="chosen-chef">{this.props.chefs[this.state.number].name}!</h3>
-                <Link className="resultlink"to={`/chefs/${this.props.chefs[this.state.number].id}/items`}>Would you like to check out the chef's page?</Link> */}
+                this.randomChef(this.props.chefs.length) : null}         
             </div>
         );
     }
