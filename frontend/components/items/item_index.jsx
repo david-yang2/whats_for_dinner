@@ -46,13 +46,27 @@ class ItemIndex extends React.Component{
                 <input className="searchbar" type="text" 
                         placeholder="Search for an item.." 
                         onChange={this.updateSearch()} />
-                <ul>
-                {
-                    items.map(item => {
-                        if(this.state.searchTerm == '') {
- 
-                            return (
-                                <div>
+                <div className="items-container">
+                    <ul>
+                    {
+                        items.map(item => {
+                            if(this.state.searchTerm == '') {
+    
+                                return (
+                                    <div>
+                                        <ItemIndexItem
+                                        item={item}
+                                        cart={this.state.cart}
+                                        addToCart={this.addToCart}
+                                        key={item.id}
+                                        user={this.props.user}
+                                        currentUser = {this.props.session.currentUser}
+                                        />
+                                    </div>
+                                )
+                            } else if (item.name.toLowerCase().includes(this.state.searchTerm) ||
+                                        item.description.toLowerCase().includes(this.state.searchTerm)) {
+                                return (
                                     <ItemIndexItem
                                     item={item}
                                     cart={this.state.cart}
@@ -61,25 +75,13 @@ class ItemIndex extends React.Component{
                                     user={this.props.user}
                                     currentUser = {this.props.session.currentUser}
                                     />
-                                </div>
-                            )
-                        } else if (item.name.toLowerCase().includes(this.state.searchTerm) ||
-                                    item.description.toLowerCase().includes(this.state.searchTerm)) {
-                            return (
-                                <ItemIndexItem
-                                item={item}
-                                cart={this.state.cart}
-                                addToCart={this.addToCart}
-                                key={item.id}
-                                user={this.props.user}
-                                currentUser = {this.props.session.currentUser}
-                                />
-                            )
-                        }
-                    })
+                                )
+                            }
+                        })
 
-                }
-                </ul>
+                    }
+                    </ul>
+                </div>
                 {/* <div>
                     <Cart fromItemContainer={true}/>
                 </div> */}

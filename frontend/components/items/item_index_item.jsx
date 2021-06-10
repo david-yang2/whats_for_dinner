@@ -11,7 +11,7 @@ const ItemIndexItem =(props) =>{
     // if (props.item) {return null}
     // const {items} = this.props
         return (
-            <div className="items-container">
+            <div className="item-card">
                 <Card item={props.item} 
                       cart={props.cart} 
                       addToCart={props.addToCart}
