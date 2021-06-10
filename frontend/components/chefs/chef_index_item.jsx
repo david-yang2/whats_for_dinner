@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Card from '../card/card';
 import LikeChef from '../likeChef/like_chef';
-// import "./chef_index_item.css";
 
 
 const ChefIndexItem = (props) => {
@@ -18,11 +17,11 @@ const ChefIndexItem = (props) => {
               <div className="cheflike"><LikeChef /></div> 
             </div>   
             <br />
-            <Link className="cheflink" to={`/chefs/${props.chef.id}/items`}>Check out {props.chef.name}'s Items</Link>
+            {/* <Link className="cheflink" to={`/chefs/${props.chef.id}/items`}>Check out {props.chef.name}'s Items</Link>
             <Link className="cheflink" to={`/chefs/${props.chef.id}`}>Quick Summary of Chef</Link>
             <br />
             <div> {props.chef.name}'s favorite quote:</div>
-            <p className="chefquote">{props.chef.bio}</p>
+            <p className="chefquote">{props.chef.bio}</p> */}
           </div>
 
 

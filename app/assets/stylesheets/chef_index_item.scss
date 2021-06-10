@@ -3,16 +3,14 @@ $border-color: transparent;
 $border-style: solid;
 
 .chef-card{
-    height:100%;
+    height:60%;
     width: 250px;
     overflow: hidden;
     box-shadow: 0px 0px 20px -5px;
     transition: 1s; 
     display: flex;
     justify-content: center;
-    margin: 10% 0 10% 0;
-    border: $border-color;
-    border-style: $border-style;
+    margin:5% 0% 5% 0%;
 }
 
 .chef-card:hover{
@@ -32,25 +30,28 @@ $border-style: solid;
 
 .chefheader{
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
+
 }
 .chefname{
-    width: 100%;
-    border: $border-color;
-    border-style: $border-style;
+    width: 80%;
+    padding-left:5%;
+    // border: $border-color;
+    // border-style: $border-style;
+    // background-color: rgb(167, 247, 247);
 }
 .cheflike{
-    width: 100%;
+    width: 20%;
     display: flex;
-    justify-content: flex-end;
-    border: $border-color;
-    border-style: $border-style;
+    justify-content: center;
+
 }
 
 .cheflink{
     width: 100%;
     border: $border-color;
     border-style: $border-style;
+    background-color: rgb(230, 195, 131);
 }
 .chefquote{
     height: 65px;
