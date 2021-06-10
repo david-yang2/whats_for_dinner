@@ -12,24 +12,19 @@ $border-style: solid;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding: 30px 10%;
+    padding: 0 2%;
     background-color: #00a2b4;
-    border: $border-color;
-    border-style: $border-style;
-    margin: 10px 15px 0 15px;
     opacity: 75%;
 }
 
 .logo{
-    width: 8%;
-    height: 8%;
+    width: 50px;
+    height: 50px;
     justify-content: flex-start;
-    border: $border-color;
-    border-style: $border-style;
 }
 
 .navbar{
-    width: 75%;
+    width: 70%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -58,20 +53,17 @@ li, a {
 }
 
 .signup-container{
-    width: 25%;
+    width: 20%;
     display: flex;
+    flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     /* background-color:darkblue; */
-    border: $border-color;
-    border-style: $border-style;
 }
 
 .signup{
     /* margin: 1%; */
     padding: 5px;
-    border: $border-color;
-    border-style: $border-style;
 }
 
 button{
@@ -80,8 +72,6 @@ button{
     border:none;
     border-radius: 50px;
     cursor: pointer;
-    border: $border-color;
-    border-style: $border-style;
 }
 
 .btns{
@@ -92,8 +82,6 @@ button{
     padding: 2px 6px 2px 6px;
     border-radius: 50px;
     margin: 5px;
-    border: $border-color;
-    border-style: $border-style;
 }
 .btnl{
     font: bold 15px Arial;
@@ -103,7 +91,5 @@ button{
     padding: 2px 6px 2px 6px;
     border-radius: 50px;
     margin: 5px;
-    border: $border-color;
-    border-style: $border-style;
 }
 

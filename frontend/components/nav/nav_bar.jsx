@@ -12,14 +12,14 @@ export default ({ currentUser, logout }) => {
   // use ternary to accomplish that
     // currentUser ? () : ()
   const display = currentUser ? (
-    <div>
+    <div className="signup-container">
       <p> Hello, {currentUser.username}</p>
       <button onClick={logout}>Log out</button>
     </div>
   )
   // : is part of the ternary function
   : (
-    <div>
+    <div className="signup-container">
       <Link className="btnl" to="/login">Log In</Link>
       <Link className="btns" to="/signup">Sign Up</Link>
     </div>
@@ -40,9 +40,7 @@ export default ({ currentUser, logout }) => {
           {cart}
         </ul>
       </nav>
-      <div className="signup-container">
         {display}
-      </div>
     </header>
   );
 };
