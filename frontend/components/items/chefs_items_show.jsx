@@ -15,19 +15,29 @@ class ChefsItemsShow extends React.Component{
     
     const {items, chef} = this.props;
     return (
-      <div>
-        <div>
-          <img className="chefimg"src={chef.imagepath} alt="" />
-          <h2>{chef.name}</h2>
+      <div className="chef-items">
+        <div className="chef-header">
+          <img className="chef-portrait" src={chef.imagepath} alt="" />
+          <div>
+            <h1>Chef {chef.name}</h1>
+            <p>{chef.bio}</p>
+          </div>
         </div>
-        <ul>
-            {Object.values(items).map(item=> <li key={item.id}>
-                                                <h3>{item.name}</h3>
-                                                <h5>{item.description}</h5>
-                                                <h4>{item.price}</h4>
-                                            </li> 
+        <div className="chefs-items-list">
+            <h4>Here's a list of {chef.name}'s dishes:</h4>
+            {Object.values(items).map(item=>  <div className="chefs-item" key={item.id}>
+                                                <div className="chef-item-header">
+                                                  <img className="item-img" src={item.imagepath} alt="" />
+                                                  <h5>Price: {item.price}</h5>
+                                                </div>
+                                                <div className="chef-item-content">
+                                                  <h3>{item.name}</h3>
+                                                  <h5>Description: {item.description}</h5>
+                                                  
+                                                </div>
+                                              </div> 
             )}
-        </ul>
+        </div>
       </div>
     );
   }
