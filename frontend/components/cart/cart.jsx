@@ -21,19 +21,34 @@ class Cart extends React.Component {
 
     render(){
         if (!this.props.cartitems) return null
-        if (this.props.fromItemContainer){
-           return(
-               <div>
-                    <div>
-                        {Object.values(this.props.cartitems).map((item,idx)=> 
-                                                <h3 key={idx}> {item.name}</h3>)}
-                    </div>
-                    <Link to="/cart">Check out your saved items!</Link>
+
+        // if (this.props.fromItemContainer){
+        //    return(
+        //        <div >
+        //             <div className="cart-container">
+        //                 {Object.values(this.props.cartitems).map((item,idx)=> 
+        //                                         <h3 key={idx}> {item.name}</h3>)}
+        //             </div>
+        //             <Link to="/cart">Check out your saved items!</Link>
+        //         </div>
+        //         )
+        //     } else {
+
+
+        // map through cartitems and create array with their prices
+        let subArr = Object.values(this.props.cartitems).map((item) => item.price)
+
+        // get sum and set to 2 decimal places
+        let subTotal = subArr.reduce((a, b) => a + b, 0).toFixed(2)
+
+        return (
+            <div className="cart-container">
+                <div className="cart-header">
+                    <h2>Items in your cart:</h2>
+                    <h2>Your subtotal is: ${subTotal}</h2>
                 </div>
-                )
-            } else {
-            return (
-                <div>
+                
+                <div className="cart-items-container">
                     {Object.values(this.props.cartitems).map((item,idx)=>
                                                         <Cartitems 
                                                             key={idx}
@@ -41,8 +56,12 @@ class Cart extends React.Component {
                                                             updateReview = {this.updateReview}/>
                                                             )}
                 </div>
-            )}
-    }
+            </div>
+        )}
+
+
+    // }
+
 }
 
 export default Cart;
