@@ -1,0 +1,57 @@
+.chef-items{
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin: 2% 1% 2% 2%;
+}
+
+
+.chef-header{
+    width:40%;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+.chef-portrait{
+    width:250px;
+    height:250px;
+    border-radius: 50px;
+    margin: 3% 0% 3% 0%;
+}
+
+.chefs-items-list{
+    margin-top: 2%;
+    margin-left: 5%;
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.chefs-item{
+    display:flex;
+    margin: 3% 0% 1% 0%;
+}
+
+.chef-item-header{
+    flex-wrap:wrap;
+    width:120px;
+    
+}
+
+.item-img{
+    width:100px;
+    height:100px;
+    border-radius: 20px;
+}
+
+.chef-item-content{
+    display:flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 250px;
+    margin-left:1%;
+    overflow: auto;
+}
