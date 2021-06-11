@@ -10,6 +10,7 @@ class Api::UsersController < ApplicationController
     end
   end
   
+  #PATCH  /api/users/:id
   def update
     @user = User.find(params[:id])
     if @user.update(user_params)
@@ -54,6 +55,6 @@ class Api::UsersController < ApplicationController
   end
   
   def user_params
-    params.require(:user).permit(:username, :password, :id, cart: [:name, :price])
+    params.require(:user).permit(:username, :password, :email, :id, :deliveryInstructions, cart: [:name, :price])
   end
 end

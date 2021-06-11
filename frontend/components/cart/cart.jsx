@@ -7,12 +7,28 @@ class Cart extends React.Component {
     constructor(props){
         super(props);
 
-        this.updateReview = this.updateReview.bind(this)
+        this.updateReview = this.updateReview.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);  
     }
 
     componentDidMount(){
+        this.props.fetchCurrentUser(this.props.session.currentUser.id)
         if (!this.props.session.currentUser) return null
         this.props.getUsersCart(this.props.session.currentUser.id)
+        
+    }
+
+    update(field){
+        return e => {
+          this.setState({[field]: e.currentTarget.value});
+        }
+      }
+
+    handleSubmit(){
+        return this.props.updateInstructions({
+                                            id: this.props.session.currentUser.id,
+                                            deliveryInstructions: this.state.deliveryInstructions})
+
     }
 
     updateReview(updatedReview){
@@ -20,7 +36,60 @@ class Cart extends React.Component {
     }
 
     render(){
-        if (!this.props.cartitems) return null
+        if (!this.props.cartitems || !this.props.user) return null
+
+
+        // map through cartitems and create array with their prices
+        let subArr = Object.values(this.props.cartitems).map((item) => item.price)
+
+        // get sum and set to 2 decimal places
+        let subTotal = subArr.reduce((a, b) => a + b, 0).toFixed(2)
+        this.state = this.props.user
+        return (
+            <div className="cart-container">
+                <div className="cart-header">
+                    <h2>Items in your cart:</h2>
+                </div>
+                <div className="cart-info">
+                    <div className="cart-items-container">
+                        {Object.values(this.props.cartitems).map((item,idx)=>
+                                                            <Cartitems 
+                                                                key={idx}
+                                                                item = {item} 
+                                                                // updateReview = {this.updateReview}
+                                                                />
+                                                                )}
+                    </div>
+                    <div className="check-out">
+                        <h2>Your subtotal is: ${subTotal}</h2>
+                        <form className="instructions-form"
+                                onSubmit={this.handleSubmit}>
+                            <textarea className="instructions-box"
+                                value={this.state.deliveryInstructions}
+                                placeholder="Would you like to provide any delivery instructions?"
+                                onChange = {this.update('deliveryInstructions')}
+                            />
+                            <input type="submit" value="Update Instructions" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        )}
+
+
+    // }
+
+}
+
+export default Cart;
+
+
+
+
+
+
+
+
 
         // if (this.props.fromItemContainer){
         //    return(
@@ -35,33 +104,9 @@ class Cart extends React.Component {
         //     } else {
 
 
-        // map through cartitems and create array with their prices
-        let subArr = Object.values(this.props.cartitems).map((item) => item.price)
 
-        // get sum and set to 2 decimal places
-        let subTotal = subArr.reduce((a, b) => a + b, 0).toFixed(2)
+        // updateInstructions(instructions){
+        //     this.props.updateDeliveryInstructions(instructions)
+        // }
 
-        return (
-            <div className="cart-container">
-                <div className="cart-header">
-                    <h2>Items in your cart:</h2>
-                    <h2>Your subtotal is: ${subTotal}</h2>
-                </div>
-                
-                <div className="cart-items-container">
-                    {Object.values(this.props.cartitems).map((item,idx)=>
-                                                        <Cartitems 
-                                                            key={idx}
-                                                            item = {item} 
-                                                            updateReview = {this.updateReview}/>
-                                                            )}
-                </div>
-            </div>
-        )}
-
-
-    // }
-
-}
-
-export default Cart;
+        // this.updateInstructions = this.updateInstructions.bind(this)
