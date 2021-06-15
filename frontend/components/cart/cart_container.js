@@ -4,17 +4,18 @@ import {getUsersCart} from '../../actions/cartitem_actions';
 import {fetchCurrentUser, updateCartReview, updateInstructions} from '../../actions/user_actions';
 
 // simply fetch and display the current users cart
-const mapStateToProps = state => ({
+const mapStateToProps = state => {
+    return{
     user: state.user,
     cartitems: state.cartitems,
     session: state.session,
-})
+}}
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = dispatch => {
+    return{
     getUsersCart: userId => dispatch(getUsersCart(userId)),
     updateCartReview: item => dispatch(updateCartReview(item)),
     fetchCurrentUser: userId => dispatch(fetchCurrentUser(userId)),
     updateInstructions: instruction => dispatch(updateInstructions(instruction))
-})
-
+}}
 export default connect(mapStateToProps, mapDispatchToProps)(Cart);
