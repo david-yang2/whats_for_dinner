@@ -8,12 +8,9 @@ const Card = (props) => {
                 <div className="card-context">
                     <div className = "name-container">
                         <h3>{props.item.name}</h3>
-                        <div className="ratingicons">
-                            <RateItem />
-                        </div>
                     </div>
                     <div >
-                        <p>{props.item.description}</p>
+                        <p>{props.item.description.toLowerCase()}</p>
                     </div>
                 </div>
 
