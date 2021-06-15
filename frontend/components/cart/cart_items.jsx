@@ -6,13 +6,13 @@ class Cartitems extends React.Component{
         super(props)
 
         this.state = this.props.item;
-
     }
-    
+
     render(){
         return (                                
         <div className="cart-cell">
             <div className="cartitems">
+                {/* render item's image, name, description, price and rating component */}
                 <img className="cartitemimg" src={this.state.imagepath} alt="" />
                 <div className="cartitem-desc">
                     <h3>{this.state.name}</h3>
@@ -32,27 +32,3 @@ export default Cartitems;
 
 
 
-    {/* <form className="review-form"
-            onSubmit={this.handleSubmit}>
-        <textarea className="review-box"
-            value={this.state.review}
-            onChange = {this.update('review')}
-        />
-        <input type="submit" value="Update Review" />
-    </form> */}
-
-
-
-
-    // update(field){
-    //     return e => {
-    //       this.setState({[field]: e.currentTarget.value});
-    //     }
-    //   }
-
-    // handleSubmit(){
-    //     return this.props.updateReview(this.state)
-    // }
-
-
-    // this.handleSubmit = this.handleSubmit.bind(this);
