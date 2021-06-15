@@ -1,5 +1,8 @@
 $border-color: transparent;
 $border-style: solid;
+$font: 'Montserrat', sans-serif;
+$font-style: italic;
+
 
 .home{
     background-image: url('homepagelogo.jpeg');
@@ -53,20 +56,28 @@ $border-style: solid;
 
 .home-desc{
     text-align: center;
+    font-family: $font;
+    font-style: $font-style;
+    font-weight: 900;
 }
 
 .redirect-container{
     width:100%;
     display:flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
 }
 
 .redirect-btn{
     height:75px;
-    width:45%;
+    width:35%;
     color:white;
     font-size:15px;
     border-radius:8px;
     padding:5px
+}
+
+.btn-choice{
+    font-size:20px;
+    font-weight: bold;
 }
