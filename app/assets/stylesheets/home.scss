@@ -1,23 +1,22 @@
 $border-color: transparent;
 $border-style: solid;
 
-
-// * {
-//     box-sizing: border-box;
-//     margin: 0;
-//     padding: 0;
-//     border: red;
-
-// }
-
-
 .home{
     background-image: url('homepagelogo.jpeg');
-    height: 80vh;
-    border: transparent;
-    border-style: $border-style;
-    margin: 3%;
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 89vh;
+    width: 100%;
+    // margin-top: 10px;
+    // margin-left: 10%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
     opacity: 90%;
+    align-items: flex-start;
+    padding-left:5%;
+    padding-top:10%;
 }
 
 // .splashimg {
@@ -31,14 +30,43 @@ $border-style: solid;
 //     border: $border-color;
 //     border-style: $border-style;
 // }
-
+.home-content{
+    height:60%;
+    width:40%;
+    display: flex;
+    justify-content:space-between;
+    flex-direction: column;
+}
 .hometitle {
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top:10px;
+    height: 50px;
+    // padding: 100px, 10px, 10px, 10px;
+    color: black;
+    text-align: center;
     background-color: rgba(255,255,255,0.7);
-    border: $border-color;
-    border-style: $border-style;
-    margin-top: 50%;
-    margin-bottom:50%;
 
+}
+
+.home-desc{
+    text-align: center;
+}
+
+.redirect-container{
+    width:100%;
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.redirect-btn{
+    height:75px;
+    width:45%;
+    color:white;
+    font-size:15px;
+    border-radius:8px;
+    padding:5px
 }
