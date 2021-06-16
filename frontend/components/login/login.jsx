@@ -29,7 +29,7 @@ class Login extends React.Component{
 
     // allows user to use default login
     useDemoLogin(){
-        this.props.login({username:"Emma", password:"Emma123"})
+        this.props.login({username:"David", password:"DavidDemo"})
         .then(()=> this.props.history.push(`/`));
     }
 
@@ -54,9 +54,9 @@ class Login extends React.Component{
                             value={this.state.password}
                             onChange={this.handleInput('password')}
                         />
-                        <div>
-                            <button onClick={this.handleSubmit}>Login</button>
-                            <button onClick={this.useDemoLogin}>Demo User</button>
+                        <div className="session-btn-container">
+                            <button className='session-login-btn'onClick={this.handleSubmit}>Login</button>
+                            <button className='session-login-btn'onClick={this.useDemoLogin}>Demo User</button>
                         </div>
                 </form>
             </div>

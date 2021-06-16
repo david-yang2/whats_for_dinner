@@ -52,7 +52,9 @@ class Signup extends React.Component{
                                 value={this.state.password}
                                 onChange={this.handleInput('password')}
                             />
-                        <button onClick={this.handleSubmit}>Sign Up</button>
+                            <div className="session-btn-container">
+                                <button className="session-signup-btn" onClick={this.handleSubmit}>Sign Up</button>
+                            </div>
                     </form>
                 </div>
             </div>

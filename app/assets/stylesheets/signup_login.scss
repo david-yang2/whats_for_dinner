@@ -1,32 +1,42 @@
 
 .session{
-    height:70vh;
+    height:88vh;
     width:100%;
     display:flex;
     justify-content: center;
 }
 .session-container{
-    width:250px;
+    width:30%;
+    height:50%;
     display:flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    margin: 5px;
+    margin-top: 15%
     
 }
 .session-header{
-    margin: 5%;
+    height:20%;
+    text-align: center;
 }
 
 .session-form{
-    height: 15%;
+    height: 70%;
+    width:100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-direction: column;
 }
 
-input {
-    height: 30px;
-    width: 100%;
-    margin: 2px;
-    padding: 5px;
+.session-btn-container{
+    margin-top: 5%;
+    width:100%;
+    display:flex;
+    justify-content:space-evenly;
+}
+
+.session-login-btn{
+    width:45%
+}
+.session-signup-btn{
+    width:100%
 }
