@@ -1,17 +1,19 @@
 .chef-items{
+    height:80vh;
     display:flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-direction: row;
-    margin: 2% 1% 2% 2%;
+    margin: 2% 5% 2% 5%;
 }
 
 
 .chef-header{
     width:40%;
     display:flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
     margin-top: 3%;
+    align-items: center;
 }
 
 .chef-portrait{
@@ -19,15 +21,28 @@
     height:250px;
     border-radius: 50px;
     margin: 3% 0% 3% 0%;
+
+}
+
+.chef-info{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.chef-quote{
+    text-align: center;
 }
 
 .chefs-items-list{
+    width: 47%;
     margin-top: 2%;
-    margin-left: 5%;
+    margin-left: 10%;
     display:flex;
     justify-content: flex-start;
     flex-direction: column;
     overflow: auto;
+
 }
 
 .chefs-item{
@@ -49,9 +64,30 @@
 
 .chef-item-content{
     display:flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     flex-direction: column;
     width: 250px;
     margin-left:1%;
     overflow: auto;
+}
+
+.chef-checkout{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item-btn{
+    font: bold 10px Arial;
+    text-decoration: none;
+    background-color: #88bbc7;
+    // color: white;
+    width:100px;
+    height: 100%;
+    padding: 2px 6px 2px 6px;
+    border-radius: 50px;
+    margin: 5px;
+    color:white;
+    font-size:12px;
 }

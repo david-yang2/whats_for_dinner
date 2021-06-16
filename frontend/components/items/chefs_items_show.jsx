@@ -3,12 +3,29 @@ import { Link } from 'react-router-dom';
 
 //chefs/28/items
 class ChefsItemsShow extends React.Component{
+
+  constructor(props){
+    super(props)
+    
+    this.addToCart = this.addToCart.bind(this)
+  }
 // this will invoke the connect function
   componentDidMount(){
     // chefs/28/items
     this.props.fetchChefsItems(this.props.match.params.id)
     this.props.fetchChef(this.props.match.params.id)
   }
+  addToCart(item){
+    return this.props.updateCart({
+                    user_id: this.props.session.currentUser.id,
+                    name: item.name,
+                    description: item.description,
+                    price: item.price,
+                    imagepath: item.imagepath,
+                    review: ""
+    })
+  }
+
 
   render() {
     if (!this.props.items || !this.props.chef) return null
@@ -18,9 +35,9 @@ class ChefsItemsShow extends React.Component{
       <div className="chef-items">
         <div className="chef-header">
           <img className="chef-portrait" src={chef.imagepath} alt="" />
-          <div>
-            <h1>Chef {chef.name}</h1>
-            <p>{chef.bio}</p>
+          <div className="chef-info">
+            <h1 className="chef-name">Chef {chef.name}</h1>
+            <p className="chef-quote">{chef.bio}</p>
           </div>
         </div>
         <div className="chefs-items-list">
@@ -28,12 +45,24 @@ class ChefsItemsShow extends React.Component{
             {Object.values(items).map(item=>  <div className="chefs-item" key={item.id}>
                                                 <div className="chef-item-header">
                                                   <img className="item-img" src={item.imagepath} alt="" />
-                                                  <h5>Price: {item.price}</h5>
                                                 </div>
                                                 <div className="chef-item-content">
                                                   <h3>{item.name}</h3>
-                                                  <h5>Description: {item.description}</h5>
-                                                  
+                                                  <h5>Description: {item.description.toLowerCase()}</h5>
+                                                  <div className="chef-checkout">
+                                                    <h4>Price: {item.price}</h4>
+                                                    {/* display save item button if a user is logged in */}
+                                                    {this.props.session ?
+                                                    <button className="item-btn"
+                                                            onClick={()=>this.addToCart({
+                                                                                        name:  item.name,
+                                                                                        description: item.description,
+                                                                                        price: item.price,
+                                                                                        imagepath: item.imagepath
+                                                                                      })}>Save Item!</button>
+                                                    :
+                                                    null}
+                                                  </div>
                                                 </div>
                                               </div> 
             )}
