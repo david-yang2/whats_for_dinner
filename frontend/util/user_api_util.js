@@ -1,11 +1,23 @@
 
 export const fetchUser = userId => {
-
     return $.ajax({
         url: `api/users/${userId}`,
         method: `GET`,
     })
 };
+
+
+// update deliveryInstructions for user
+//PATCH  /api/users/:id
+
+export const patchInstructions = user => {
+    return $.ajax({
+        url: `/api/users/${user.id}`,
+        method: `PATCH`,
+        data: {user}
+    })
+}
+
 
 // # POST   /api/cartitems
 // create new cartitem
