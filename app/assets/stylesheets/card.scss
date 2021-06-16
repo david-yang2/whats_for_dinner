@@ -1,6 +1,8 @@
 
 $border-color: transparent;
 $border-style: solid;
+$font: 'Montserrat', sans-serif;
+$font-style: italic;
 
 .card{
     margin: 2%;
@@ -21,24 +23,23 @@ $border-style: solid;
 }
 
 .card-context{
+    height:35%;
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 0% 5% 0% 5%;
 
-    height: 120px;
-
-    border: $border-color;
-    border-style: $border-style;
 }
 
 .price-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: $border-color;
-    border-style: $border-style;
+    margin: 0% 5% 0% 5%;
 }
 
 .itemprice {
     justify-content: flex-start;
-    padding-left: 20px;
     
 }
 .savebtn{
@@ -47,13 +48,17 @@ $border-style: solid;
 }
 
 
-.name-container{
-    display: flex;
-    justify-content: space-between;
-    border: $border-color;
-    border-style: $border-style;
+// .name-container{
+//     display: flex;
+//     justify-content: space-between;
+//     flex-direction: row;
+//     align-items: center;
+//     border: $border-color;
+//     border-style: $border-style;
+//     margin-bottom: 2%;
+//     font-family: $font;
 
-}
+// }
 
 .ratingicons{
     width:60%;
