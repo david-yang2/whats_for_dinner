@@ -1,6 +1,8 @@
 import {
     CURRENT_USER,
-    UPDATE_CART,
+    UPDATE_REVIEW,
+    UPDATE_INSTRUCTIONS
+
 } from "../actions/user_actions";
 
 const UsersReducer = (oldState = {}, action) =>{
@@ -13,9 +15,12 @@ const UsersReducer = (oldState = {}, action) =>{
             // user is the payload for the CURRENT_USER action
             return action.user;
 
-        case UPDATE_CART:
-            nextState = action.updatedCart;
-    
+        case UPDATE_INSTRUCTIONS:
+            // return user with updated instructions
+            return action.user;
+
+        case UPDATE_REVIEW:
+            nextState = action.updatedReview;
             return nextState;
 
         default:
