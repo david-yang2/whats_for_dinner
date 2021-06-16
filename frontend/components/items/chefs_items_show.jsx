@@ -41,7 +41,7 @@ class ChefsItemsShow extends React.Component{
           </div>
         </div>
         <div className="chefs-items-list">
-            <h4>Here's a list of {chef.name}'s dishes:</h4>
+            <h3>Here's a list of {chef.name}'s dishes:</h3>
             {Object.values(items).map(item=>  <div className="chefs-item" key={item.id}>
                                                 <div className="chef-item-header">
                                                   <img className="item-img" src={item.imagepath} alt="" />
