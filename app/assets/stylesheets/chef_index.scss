@@ -28,10 +28,16 @@ $font-style: italic;
     border-style: $border-style;
 }
 
-.randbtn{
+.randomizer-container{
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    height: 5%;
+    height: 10%;
     align-items: center;
+}
+
+.randomizer-btn{    
+    color:white;
+    font-size:20px;
+    height:100%;
 }

@@ -48,8 +48,8 @@ class ChefIndex extends React.Component{
                         }
                     </Carousel>
                 </div>
-                <div className="randbtn">
-                    <button onClick={this.randomChef}>Pick a chef for me!</button>
+                <div className="randomizer-container">
+                    <button className="randomizer-btn" onClick={this.randomChef}>Pick a chef for me!</button>
                     {this.state.showComponent ? 
                         <Randomizer chefs={chefs} /> : null }
                 </div>
