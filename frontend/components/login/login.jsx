@@ -41,14 +41,16 @@ class Login extends React.Component{
                 <div className="session-container">
                 <h2 className="session-header"> Please Login!</h2>
                 <form className="session-form">
-                        <input 
+                        <input
+                            className="session-input" 
                             placeholder="Username:"
                             type="text"
                             value={this.state.username}
                             onChange={this.handleInput('username')}
                         />
 
-                        <input 
+                        <input
+                            className="session-input" 
                             placeholder="Password:"
                             type="password"
                             value={this.state.password}

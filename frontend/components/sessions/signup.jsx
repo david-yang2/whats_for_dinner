@@ -35,18 +35,21 @@ class Signup extends React.Component{
                     <h2 className="session-header"> Create New Account</h2>
                     <form className="session-form">
                             <input
+                                className="session-input"
                                 placeholder="Username:"
                                 type="text"
                                 value={this.state.username}
                                 onChange={this.handleInput('username')}
                             />
                             <input 
+                                className="session-input"
                                 placeholder="Email:"
                                 type="text"
                                 value={this.state.email}
                                 onChange={this.handleInput('email')}
                             />
                             <input 
+                                className="session-input"
                                 placeholder="Password:"
                                 type="password"
                                 value={this.state.password}

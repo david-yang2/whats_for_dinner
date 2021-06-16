@@ -6,7 +6,7 @@
     justify-content: center;
 }
 .session-container{
-    width:30%;
+    width:25%;
     height:50%;
     display:flex;
     justify-content: flex-start;
@@ -32,6 +32,13 @@
     width:100%;
     display:flex;
     justify-content:space-evenly;
+}
+
+.session-input{
+    height:25px;
+    padding-left:5%;
+    margin-bottom:1%;
+    vertical-align: middle;
 }
 
 .session-login-btn{
