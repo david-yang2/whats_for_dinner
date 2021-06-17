@@ -11,6 +11,7 @@ const ChefIndexItem = (props) => {
     return (
       <div className="chef-card">
           <div>
+            {/* click to view chef's show page */}
             <a href={`#/chefs/${props.chef.id}/items`}>
               <img className="chefimg"src={props.chef.imagepath} alt="" />
               <div className="chefheader">
@@ -19,17 +20,15 @@ const ChefIndexItem = (props) => {
               </div>   
               <br />
             </a>
-            {/* <Link className="cheflink" to={`/chefs/${props.chef.id}/items`}>Check out {props.chef.name}'s Items</Link>
-            <Link className="cheflink" to={`/chefs/${props.chef.id}`}>Quick Summary of Chef</Link>
-            <br />
-            <div> {props.chef.name}'s favorite quote:</div>
-            <p className="chefquote">{props.chef.bio}</p> */}
           </div>
-
-
       </div>
-
     )
-
 };
 export default ChefIndexItem;
+
+
+{/* <Link className="cheflink" to={`/chefs/${props.chef.id}/items`}>Check out {props.chef.name}'s Items</Link>
+<Link className="cheflink" to={`/chefs/${props.chef.id}`}>Quick Summary of Chef</Link>
+<br />
+<div> {props.chef.name}'s favorite quote:</div>
+<p className="chefquote">{props.chef.bio}</p> */}
