@@ -12,14 +12,14 @@ export default ({ currentUser, logout }) => {
   // use ternary to accomplish that
     // currentUser ? () : ()
   const display = currentUser ? (
-    <div className="signup-container">
-      <p> Hello, {currentUser.username}</p>
-      <button onClick={logout}>Log out</button>
+    <div className="welcome-container">
+      <text className="welcome-text"> Hello, {currentUser.username}</text> <br/>
+      <button className="logout" onClick={logout}>Log out</button>
     </div>
   )
   // : is part of the ternary function
   : (
-    <div className="signup-container">
+    <div>
       <Link className="btnl" to="/login">Log In</Link>
       <Link className="btns" to="/signup">Sign Up</Link>
     </div>
@@ -32,15 +32,27 @@ export default ({ currentUser, logout }) => {
   return (
     <header className="header">
       <img className="logo" src="./images/home/logo1.png" alt=""/>
-      <nav className="navbar">
-        <ul className ="navlinks">
-          <li><Link className ="homel" to='/'>Home</Link></li>
-          <li><Link className ="chefsl" to='/chefs'>Our Chefs</Link></li>
-          <li><Link className ="iteml" to='/items'>Items</Link></li>
-          {cart}
-        </ul>
-      </nav>
-        {display}
+      <div className="header-content">
+        <div className="portfolio">
+            <a className="github" href='https://github.com/david-yang2'>
+              <div/>
+            </a>
+            <a className="linkedin" href='https://www.linkedin.com/in/david-yang2/'>
+              <div/>
+            </a>
+          </div>
+        <nav className="navbar">
+          <ul className ="navlinks">
+            <li><Link className ="homel" to='/'>Home</Link></li>
+            <li><Link className ="chefsl" to='/chefs'>Our Chefs</Link></li>
+            <li><Link className ="iteml" to='/items'>Items</Link></li>
+            {cart}
+          </ul>
+        </nav>
+        <div className="signup-container">
+          {display}
+        </div>
+      </div>
     </header>
   );
 };
