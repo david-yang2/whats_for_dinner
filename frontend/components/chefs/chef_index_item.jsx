@@ -11,12 +11,14 @@ const ChefIndexItem = (props) => {
     return (
       <div className="chef-card">
           <div>
-            <img className="chefimg"src={props.chef.imagepath} alt="" />
-            <div className="chefheader">
-              <h3 className="chefname">{props.chef.name}</h3>   
-              <div className="cheflike"><LikeChef /></div> 
-            </div>   
-            <br />
+            <a href={`#/chefs/${props.chef.id}/items`}>
+              <img className="chefimg"src={props.chef.imagepath} alt="" />
+              <div className="chefheader">
+                <h3 className="chefname">{props.chef.name}</h3>   
+                <div className="cheflike"><LikeChef /></div> 
+              </div>   
+              <br />
+            </a>
             {/* <Link className="cheflink" to={`/chefs/${props.chef.id}/items`}>Check out {props.chef.name}'s Items</Link>
             <Link className="cheflink" to={`/chefs/${props.chef.id}`}>Quick Summary of Chef</Link>
             <br />
