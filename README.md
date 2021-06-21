@@ -1,24 +1,12 @@
-# README
+## WhatsForDinner
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Indecisiveness gets the best of us, especially around dinner time. **WhatsForDinner**, a full-stack web application, can help you with that. You can start off by picking from our distinguished chefs or from a full list of items offered by our chefs. 
 
-Things you may want to cover:
+## Technologies
 
-* Ruby version
+Technologies used in this project include:
 
-* System dependencies
+- React with Redux - frontend API
+- Ruby on Rails - backend API
+- PostgreSQL - database
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
