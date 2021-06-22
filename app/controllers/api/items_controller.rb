@@ -12,19 +12,7 @@ class Api::ItemsController < ApplicationController
         #show all the items
         render json: Item.all
     end
-    
-    # def create
-    #     @dish = Dish.new(dish_params)
-    
-    #     @chef = @dish.chef
 
-    #     if @dish.save
-    #         render :show
-    #     else
-    #         render json: @dish.errors.full_messages, status: :422
-    #     end
-    # end
-    
     private
     def dish_params
         params.require(:item).permit(:chef_id, :name, :description, :spiciness)
