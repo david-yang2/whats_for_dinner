@@ -10,7 +10,6 @@ class ChefShow extends React.Component{
   render() {
 
     const { chef } = this.props;
-    console.log(this.props)
     return (
       <div>
           <h1>{chef.name}</h1>
