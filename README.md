@@ -10,3 +10,12 @@ Technologies used in this project include:
 - Ruby on Rails - backend API
 - PostgreSQL - database
 
+## Top Application Features
+
+### Selecting Chefs
+
+You can select a specific Chef in one of two ways: 
+
+1. Click on the Chef's container
+2. Click the "Pick a Chef for me!" button. 
+
