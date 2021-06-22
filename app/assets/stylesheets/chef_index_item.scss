@@ -1,6 +1,8 @@
 
 $border-color: transparent;
 $border-style: solid;
+$font: 'Montserrat', sans-serif;
+$font-style: italic;
 
 .chef-card{
     height:60%;
@@ -36,6 +38,7 @@ $border-style: solid;
 .chefname{
     width: 80%;
     padding-left:5%;
+    font-family: $font;
     // border: $border-color;
     // border-style: $border-style;
     // background-color: rgb(167, 247, 247);
