@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import NavBar from './nav_bar';
+// import {getUsersCart} from '../../actions/cartitem_actions';
 
 // allow us to create a button that will allow current user to log out
 import { logout } from '../../actions/session_actions';
@@ -9,6 +10,7 @@ import { logout } from '../../actions/session_actions';
 const mapStateToProps = state => {
   return{
   currentUser: state.session.currentUser,
+  // cartitems: state.cartitems,
   }
 };
 
@@ -16,6 +18,7 @@ const mapStateToProps = state => {
 // make sure to pass down the logout function as well
 const mapDispatchToProps = dispatch => {
   return{
+  // getUsersCart: userId => dispatch(getUsersCart(userId)),
   logout: () => dispatch(logout()),
   }
 };
