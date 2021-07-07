@@ -14,7 +14,7 @@ import LoginContainer from './login/login_container';
 import Home from './home/home';
 import {AuthRoute,
         ProtectedRoute} from "../util/route_api_util";
-import UpdateCartCompContainer from "./user/updatecart_container";
+// import UpdateCartCompContainer from "./user/updatecart_container";
 
 // NB: this file is complete - you do not to write/edit anything!
 const App = () => (
@@ -31,7 +31,7 @@ const App = () => (
       <Route path="/chefs/:id/edit" component={EditChefFormContainer} />
       <Route exact path="/items" component={ItemsIndexContainer} />
       <ProtectedRoute path="/cart" component={CartContainer} />
-      <Route path="/updatecart" component={UpdateCartCompContainer} />
+      {/* <Route path="/updatecart" component={UpdateCartCompContainer} /> */}
 
 
   </div>
