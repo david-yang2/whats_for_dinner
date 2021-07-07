@@ -19,11 +19,10 @@ class Randomizer extends React.Component{
     randomChef(max){
         const newIdx = Math.floor(Math.random() * max);
         return <Redirect to={`/chefs/${this.props.chefs[newIdx].id}/items`} />
-
+    }
 
         // this.setState({number: newIdx, generateRandChef: !this.state.generateRandChef})
-
-    }   
+  
 
 
     render () {
