@@ -21,7 +21,7 @@ class RateItem extends React.Component{
 
     render() {
         return(
-            <div>
+            <div className="rating">
                 {[...Array(5)].map((item, i) => {
                     const ratingValue = i + 1;
 
