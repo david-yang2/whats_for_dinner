@@ -1,3 +1,4 @@
+require 'bcrypt'
 class User < ApplicationRecord
   # # This makes it so we can validate our password length, without storing it in the DB
   attr_reader :password
