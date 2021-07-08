@@ -11,7 +11,7 @@
 Chef.destroy_all
 
 chef1 = Chef.create(location: "North Beach", bio: '"We help make everyday delicious"', name:"Marion", imagepath:"/images/chefs/marion.jpeg")
-chef2 = Chef.create(location: "Oakland", bio: '"Cooking is like love. It should be entered into with abandon or not at all."', name:"Marshawn",imagepath:"/images/chefs/marshawn.jpeg")
+chef2 = Chef.create(location: "Oakland", bio: '"Cooking is like love. It should be entered into with abandon or not at all."', name:"Marshawn",imagepath:"/iamges/chefs/marshawn.jpeg")
 chef3 = Chef.create(location: "Richmond", bio: '"The secret of success in life is to eat what you like and let the food fight it out inside”', name:"Mark",imagepath:"/images/chefs/mark.jpeg")
 chef4 = Chef.create(location: "Chinatown", bio: '“A recipe has no soul, You as the cook must bring soul to the recipe”', name:"Alvin",imagepath:"/images/chefs/alvin.jpeg")
 chef5 = Chef.create(location: "Sunset", bio: '"The only thing I like better than talking about food is eating”', name:"Mike",imagepath:"/images/chefs/mike.jpeg")
