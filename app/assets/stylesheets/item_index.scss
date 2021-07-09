@@ -7,7 +7,6 @@ $border-style: solid;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-
 }
 
 .searchbar{
@@ -19,14 +18,13 @@ $border-style: solid;
     border-radius: 5%;
     padding-left: 3%;
 }
+
 .items-container{
     height: 85%;
     width:98%;
     margin: 2% 2% 2% 2%;
     overflow:auto;
     padding:12px 0px 10px 0px;
-    // float: left;
-    // overflow: auto;
 }
 
 .item-card{

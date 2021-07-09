@@ -9,7 +9,6 @@ $border-style: solid;
     height:76vh;
     width:96%;
     margin:2%
-
 }
 
 .cart-header{
@@ -64,8 +63,8 @@ $border-style: solid;
     box-shadow: 0px 0px 20px -5px #b8aaaa;
     margin:2% 0% 1% 0%;
     transition: 1s; 
-
 }
+
 .cartitems{
     width:100%;
     display:flex;
@@ -79,6 +78,7 @@ $border-style: solid;
     justify-content: space-between;
     padding: 5px 0px 5px 0px;
 }
+
 .item-interactive{
     width:20%;
     height:100%;
@@ -91,7 +91,6 @@ $border-style: solid;
     border-radius: 20px;
     padding:10px
 }
-
 
 .rating{
     display:flex;

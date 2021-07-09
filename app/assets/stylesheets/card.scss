@@ -11,15 +11,11 @@ $font-style: italic;
     overflow: hidden;
     box-shadow: 0px 0px 20px -5px;
     transition: 1s; 
-    border: $border-color;
-    border-style: $border-style;
 }
 
 .card:hover{
     transform: scale(1.1);
     box-shadow: 0px 0px 15px 0px;
-    border: $border-color;
-    border-style: $border-style;
 }
 
 .card-context{
@@ -30,7 +26,6 @@ $font-style: italic;
     margin: 0% 5% 0% 5%;
 
 }
-
 .price-container{
     display: flex;
     justify-content: space-between;
@@ -48,19 +43,6 @@ $font-style: italic;
     color:white;
 }
 
-
-// .name-container{
-//     display: flex;
-//     justify-content: space-between;
-//     flex-direction: row;
-//     align-items: center;
-//     border: $border-color;
-//     border-style: $border-style;
-//     margin-bottom: 2%;
-//     font-family: $font;
-
-// }
-
 .ratingicons{
     width:60%;
 }
@@ -68,6 +50,4 @@ $font-style: italic;
 .itemimg{
     height: 200px;
     width: 100%;
-    border: $border-color;
-    border-style: $border-style;
 }

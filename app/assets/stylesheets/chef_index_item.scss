@@ -22,7 +22,6 @@ $font-style: italic;
     border-style: $border-style;
 }
 
-
 .chefimg{
     height: 250px;
     width: 100%;
@@ -39,15 +38,11 @@ $font-style: italic;
     width: 80%;
     padding-left:5%;
     font-family: $font;
-    // border: $border-color;
-    // border-style: $border-style;
-    // background-color: rgb(167, 247, 247);
 }
 .cheflike{
     width: 20%;
     display: flex;
     justify-content: center;
-
 }
 
 .cheflink{
@@ -56,6 +51,7 @@ $font-style: italic;
     border-style: $border-style;
     background-color: rgb(230, 195, 131);
 }
+
 .chefquote{
     height: 65px;
     width: 100%;
