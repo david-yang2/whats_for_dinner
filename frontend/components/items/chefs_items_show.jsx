@@ -31,6 +31,7 @@ class ChefsItemsShow extends React.Component{
     if (!this.props.items || !this.props.chef) return null
     
     const {items, chef} = this.props;
+    debugger
     return (
       <div className="chef-items">
         <div className="chef-header">
@@ -52,7 +53,7 @@ class ChefsItemsShow extends React.Component{
                                                   <div className="chef-checkout">
                                                     <h4>Price: {item.price}</h4>
                                                     {/* display save item button if a user is logged in */}
-                                                    {this.props.session ?
+                                                    {this.props.session.currentUser ?
                                                     <button className="item-btn"
                                                             onClick={()=>this.addToCart({
                                                                                         name:  item.name,
