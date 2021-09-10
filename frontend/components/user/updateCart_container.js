@@ -8,12 +8,10 @@ const mapStateToProps = (state) =>({
     session: state.session
 });
 
-const mapDispatchToProps = dispatch => {
-    return{
+const mapDispatchToProps = dispatch => ({
     updateCart: user => dispatch(updateCart(user)),
     fetchCurrentUser: userId => dispatch(fetchCurrentUser(userId)),
-    }
-};
+});
 
 export default connect(
                         mapStateToProps,
