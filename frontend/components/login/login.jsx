@@ -30,7 +30,7 @@ class Login extends React.Component{
     // allows user to use default login
     useDemoLogin(){
         this.props.login({username:"David", password:"DavidDemo"})
-        .then(()=> this.props.history.push(`/`));
+        this.props.history.push(`/`)
     }
 
     // password validation is set to length of 6
