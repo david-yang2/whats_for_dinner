@@ -79,6 +79,12 @@ $border-style: solid;
     padding: 5px 0px 5px 0px;
 }
 
+.cartitem-desc > div {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .item-interactive{
     width:20%;
     height:100%;
