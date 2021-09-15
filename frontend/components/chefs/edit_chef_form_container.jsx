@@ -13,7 +13,6 @@ class EditChefForm extends React.Component {
 
     render(){
         const {action, formType, chef} = this.props;
-        console.log(this.props)
         if (!chef) return "chef is uninitialized";
         return (
           <ChefForm
