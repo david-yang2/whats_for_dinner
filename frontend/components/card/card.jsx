@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import Popup from "../popup/Popup"
+import Popup from "../popup/popup"
 
 class Card extends React.Component{
 
@@ -42,10 +42,6 @@ class Card extends React.Component{
                                 showPopup={this.showPopup}>
                             <h4>You've succesfully added {this.props.item.name} to your cart</h4>
                         </Popup>
-
-
-
-
 
                     </div>
                 </div>
