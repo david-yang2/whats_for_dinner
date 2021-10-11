@@ -8,6 +8,7 @@ const ChefIndexItem = (props) => {
 
     // you can't call id on an null object, so use this to return null
     // if (!props.chef) {return null}
+    debugger
     return (
       <div className="chef-card">
           <div>
