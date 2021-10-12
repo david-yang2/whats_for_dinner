@@ -19,9 +19,9 @@ class Home extends React.Component{
     render(){
         return(
             <div className="home">
-                <div className="home-content">
-                    <h1 className="hometitle">What's for dinner?</h1>
-                    <h3 className="home-desc">Let me help you out with these 2 unique features!</h3>
+                <div>
+                    <div>What's for dinner?</div>
+                    <div>Let me help you out with these 2 unique features!</div>
                     <div className="redirect-container">
                         <button className="redirect-btn" onClick={this.redirectToChefs}>Choose From <span className="btn-choice">Chefs</span></button>
                         <button className="redirect-btn" onClick={this.redirectToItems}>Choose From <span className="btn-choice">Items</span></button>
@@ -33,18 +33,3 @@ class Home extends React.Component{
 }
 
 export default Home;
-
-
-
-
-//  const Home = () => {
-//     return (
-//         <div className="home">
-//             <h1 className="hometitle">What's for dinner</h1>
-//         </div>
-//     )
-// }
-
-// export default Home;
-
-
