@@ -20,31 +20,29 @@ $font-style: italic;
     padding-top:10%;
 }
 
-.home-content{
-    height:60%;
-    width:40%;
-    display: flex;
-    justify-content:space-between;
-    flex-direction: column;
-}
-.hometitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin-top:10px;
-    height: 50px;
-    color: black;
-    text-align: center;
-    background-color: rgba(255,255,255,0.7);
-}
+    .home > div{
+        height:60%;
+        width:40%;
+        display: flex;
+        justify-content:space-between;
+        flex-direction: column;
+    }
 
-.home-desc{
-    text-align: center;
-    font-family: $font;
-    font-style: $font-style;
-    font-weight: 900;
-}
+        .home > div > div:first-child {
+            font-size:45px;
+            font-weight: bold;
+            margin-top:10px;
+            height: 50px;
+            color: black;
+            text-align: center;
+            background-color: rgba(255,255,255,0.7);
+        }
+
+        .home > div > div:nth-child(2){
+            font-size:23px;
+            text-align: center;
+            font-weight: none;
+        }
 
 .redirect-container{
     width:100%;
@@ -53,16 +51,16 @@ $font-style: italic;
     flex-direction: row;
 }
 
-.redirect-btn{
-    height:75px;
-    width:35%;
-    color:white;
-    font-size:15px;
-    border-radius:8px;
-    padding:5px
-}
+    .redirect-btn{
+        height:100px;
+        width:40%;
+        color:white;
+        font-size:18px;
+        border-radius:8px;
+        padding:5px
+    }
 
-.btn-choice{
-    font-size:20px;
-    font-weight: bold;
-}
+    .btn-choice{
+        font-size:25px;
+        font-weight: bold;
+    }
